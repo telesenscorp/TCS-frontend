@@ -1,0 +1,224 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+.blog-preview {
+  padding: 60px 0;
+  .H3.spacer {
+    margin-bottom: 30px;
+  }
+  .side .Sub2 {
+    max-width: 190px;
+  }
+}
+.blog-view {
+  padding: 100px 0 60px;
+  .blog-side-bar {
+    width: 280px;
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+    position: sticky;
+    height: max-content;
+    top: 0;
+    img {
+      width: 280px;
+      height: 360px;
+      object-fit: cover;
+    }
+    .blog-widget {
+      padding-top: 32px;
+    }
+    a svg {
+      flex: none;
+    }
+    a:hover p {
+      color: $NavyGreen;
+    }
+  }
+  .blog-content {
+    max-width: 715px;
+    flex: 1;
+    img {
+      width: 100%;
+    }
+  }
+  .file-heading {
+    margin-bottom: 42px;
+  }
+  .file-label {
+    width: fit-content;
+  }
+}
+.blog-view-mob {
+  .blog-author {
+    display: flex;
+    padding: 40px 16px 20px;
+    flex-direction: row;
+    .img,
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $LightGrey;
+    }
+    .details {
+      margin-left: 12px;
+    }
+    .Cap {
+      font-size: 11px;
+    }
+  }
+  .mob-widget {
+    padding: 40px 16px 20px;
+    .Body {
+      font-size: 14px;
+      line-height: unset;
+    }
+  }
+  .blog-content img {
+    width: 100%;
+  }
+  .file-heading {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .blog-preview {
+    padding: 60px 32px 40px;
+    .container {
+      padding-right: 32px;
+      display: flex;
+      flex-direction: column;
+      .f3 {
+        p {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      .f7 {
+        align-self: flex-end;
+        width: 70%;
+        .H3 {
+          font-style: italic;
+          font-weight: 400;
+          font-size: 40px;
+          line-height: 47px;
+        }
+        .Body {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+        }
+      }
+      .f2 {
+        display: none;
+      }
+    }
+  }
+  .blog-view-mob {
+    padding: 32px 64px 0;
+    .blog-author {
+      padding: 40px 0 20px 168px;
+    }
+    .mob-widget {
+      margin-left: 152px;
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .blog-preview {
+    padding: 60px 0;
+    .container {
+      padding-right: unset;
+      flex-direction: unset;
+      .f3 {
+        p {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 21px;
+        }
+      }
+      .f7 {
+        align-self: unset;
+        width: unset;
+        .H3 {
+          font-style: unset;
+          font-size: 60px;
+          font-weight: 400;
+          line-height: 70px;
+        }
+        .Body {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+      }
+      .f2 {
+        display: unset;
+      }
+    }
+  }
+  .blog-view-mob {
+    padding: unset;
+    .blog-author {
+      padding: 40px 16px 20px;
+    }
+    .mob-widget {
+      margin-left: unset;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .blog-preview .container,
+  .inner-blog-preview {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    .Sub2 {
+      font-size: 12px;
+    }
+    .Body {
+      font-size: 14px;
+    }
+    .H3 {
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 47px;
+    }
+  }
+  .blog-preview {
+    padding: 60px 0 40px;
+    .container {
+      padding: 0 32px;
+    }
+    .side .Sub2 {
+      max-width: 311px;
+    }
+  }
+  .blog-view-mob {
+    .file-heading {
+      padding: 0 32px;
+    }
+    .file {
+      padding: 0 32px;
+    }
+    .file-label {
+      p {
+        padding: 0 !important;
+      }
+    }
+  }
+}

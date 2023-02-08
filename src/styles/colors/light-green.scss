@@ -1,0 +1,54 @@
+$Blend: var(--light-green);
+$White: var(--white);
+.color-light-green {
+  color: $Blend;
+}
+.color-after-light-green::after,
+.color-before-light-green::before {
+  color: $Blend;
+}
+.bg-after-light-green::after,
+.bg-before-light-green::before,
+.bg-light-green,
+.hover-bg-light-green:hover {
+  background-color: $Blend;
+}
+.fill-light-green {
+  fill: $Blend;
+  & * {
+    fill: $Blend;
+  }
+}
+.bg-gu-light-green {
+  background: linear-gradient(180deg, $Blend 0%, $White 100%);
+}
+.bg-gd-light-green {
+  background: linear-gradient(0deg, $Blend 0%, $White 100%);
+}
+.scroll-light-green {
+  border-color: $Blend !important;
+  &::before {
+    background-color: $Blend !important;
+  }
+}
+.fade-down-light-green {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(0deg, $Blend 0%, transparent 100%);
+  }
+}
+.border-color-light-green {
+  border-color: $Blend;
+}
+.hover-border-color-light-green:hover ~ div.labels {
+  &::before,
+  &::after {
+    border: 1px solid $Blend;
+  }
+}

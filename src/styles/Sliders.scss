@@ -1,0 +1,114 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+
+.shelf-content {
+  padding-left: 360px;
+  padding-right: calc(40vw - 360px);
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-left: 360px;
+  .slider-side-bar {
+    width: 360px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    p {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      margin: 16px;
+      // user-select: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+  .shelf-content {
+    padding-left: 120px;
+    padding-right: calc(40vw - 120px);
+  }
+  .slider-container {
+    padding-left: 120px;
+    .slider-side-bar {
+      width: 120px;
+    }
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.25) and (min-width: 960px) {
+  .shelf-content {
+    padding-left: 360px;
+    padding-right: calc(50vw - 360px);
+  }
+  .slider-container {
+    padding-left: 360px;
+    .slider-side-bar {
+      width: 360px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .slider-container {
+    padding-left: 0;
+    .slider-side-bar {
+      height: fit-content;
+      width: 100vw;
+      top: 130px;
+      p {
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+        font-weight: 600 !important;
+        font-size: 16px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .shelf-content {
+    padding-left: 120px;
+    padding-right: calc(40vw - 120px);
+  }
+  .slider-container {
+    padding-left: 120px;
+    .slider-side-bar {
+      height: 100%;
+      width: 120px;
+      top: 0;
+      p {
+        writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        font-weight: 700 !important;
+        font-size: 24px;
+        margin: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .slider-container {
+    padding-left: 0;
+  }
+}

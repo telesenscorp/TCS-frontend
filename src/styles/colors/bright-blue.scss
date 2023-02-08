@@ -1,0 +1,56 @@
+$Blend: var(--bright-blue);
+$White: var(--white);
+.color-bright-blue {
+  color: $Blend;
+}
+.color-after-bright-blue::after,
+.color-before-bright-blue::before {
+  color: $Blend;
+}
+.bg-after-bright-blue::after,
+.bg-before-bright-blue::before {
+  background-color: $Blend;
+}
+.bg-bright-blue,
+.hover-bg-bright-blue:hover {
+  background-color: $Blend;
+}
+.fill-bright-blue {
+  fill: $Blend;
+  & * {
+    fill: $Blend;
+  }
+}
+.bg-gu-bright-blue {
+  background: linear-gradient(180deg, $Blend 0%, $White 100%);
+}
+.bg-gd-bright-blue {
+  background: linear-gradient(0deg, $Blend 0%, $White 100%);
+}
+.scroll-bright-blue {
+  border-color: $Blend !important;
+  &::before {
+    background-color: $Blend !important;
+  }
+}
+.fade-down-bright-blue {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(0deg, $Blend 0%, transparent 100%);
+  }
+}
+.border-color- {
+  border-color: $Blend;
+}
+.hover-border-color-bright-blue:hover ~ div.labels {
+  &::before,
+  &::after {
+    border: 1px solid $Blend;
+  }
+}

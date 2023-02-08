@@ -1,0 +1,405 @@
+$NavyGreen: var(--navy-green);
+$LightGrey: var(--light-grey);
+$White: var(--white);
+.module-container {
+  margin-bottom: 12px;
+  &.side-pad {
+    padding-left: 180px !important;
+  }
+  &.padding {
+    padding: 60px;
+    &.side-pad {
+      padding-left: 120px !important;
+    }
+  }
+  .side-by-side {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  &.type-head {
+    margin-top: 18px;
+  }
+  .pdf-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto 0;
+    .pdf-btn-toggle {
+      width: max-content;
+      padding: 19px 21px;
+      border: 1px solid $NavyGreen;
+      &:hover {
+        border: 1px solid $LightGrey;
+        background-color: $LightGrey;
+      }
+      &.active {
+        background-color: $NavyGreen;
+        p {
+          color: $White;
+        }
+      }
+    }
+  }
+  .link-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 0;
+    .link-btn-toggle {
+      width: max-content;
+      padding: 19px 21px;
+      border: 1px solid $NavyGreen;
+      &:hover {
+        border: 1px solid $LightGrey;
+        background-color: $LightGrey;
+      }
+      &.active {
+        background-color: $NavyGreen;
+        p {
+          color: $White;
+        }
+      }
+    }
+  }
+  .pdf-container {
+    padding-top: 60px;
+    width: 595px;
+    margin: 0 auto;
+    .pdf-body {
+      display: flex;
+      justify-content: center;
+      .background {
+        margin-top: 30px;
+        background-color: black;
+        .react-pdf__Page {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    .pdf-buttons {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-top: 30px;
+
+      .pdf-button-save {
+        height: 66px;
+        width: 66px;
+        border-radius: 50%;
+        background-color: $NavyGreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: $White;
+          transform: rotate(-15deg);
+        }
+      }
+      .pdf-button-open {
+        position: absolute;
+        top: 0;
+        right: 0;
+        .body {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .pdf-preview {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    .pdf-preview-header {
+      width: 100%;
+      height: 56px;
+      background-color: #0A2129;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: end;
+      .pdf-preview-btn-wrapper {
+        display: flex;
+        gap: 29px;
+        align-content: center;
+        .pdf-download {
+          display: flex;
+          align-items: center;
+        }
+        .pdf-preview-close {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 1px solid #EAF5F9;
+          .line {
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 7px);
+            width: 15px;
+            height: 1px;
+            background-color: #EAF5F9;
+            transform: rotate(45deg);
+            &:nth-child(2) {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    .pdf-preview-container {
+      width: 100%;
+      height: calc(100% - 56px);
+      display: flex;
+      justify-content: center;
+      .scroll {
+        overflow: overlay;
+        .react-pdf__Page {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+}
+.blog-view-mob .module-container {
+  &.side-pad {
+    padding-left: 60px !important;
+  }
+  &.padding {
+    padding: 40px 20px;
+    &.side-pad {
+      padding: 40px;
+    }
+  }
+  .side-by-side {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .H1 {
+    font-size: 104px;
+    line-height: 122px;
+  }
+  .H2 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .H3 {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .H4 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .H5 {
+    font-size: 20px;
+  }
+  .H6 {
+    font-size: 18px;
+  }
+  .Sub {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .Sub2 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .Body {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .Body2 {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .Button {
+    font-size: 12px;
+  }
+  .Cap {
+    font-size: 10px;
+  }
+  .blog-author {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .blog-view-mob {
+    .blog-content {
+      .H-mob {
+        padding-left: 168px;
+        font-weight: 400;
+      }
+      .module-container {
+        margin-left: 168px;
+        &.side-pad {
+          padding-left: 196px !important;
+        }
+        &.padding {
+          margin-left: 168px;
+        }
+        .link-btn-wrapper {
+          margin-bottom: 50px;
+          justify-content: start;
+          .link-btn-toggle {
+            padding: 16px 101px;
+            &:hover {
+              border: 1px solid $NavyGreen;
+              background-color: initial;
+            }
+          }
+        }
+      }
+    }
+    .pdf-btn-wrapper {
+      margin: 40px auto 20px;
+      justify-content: start;
+      .pdf-btn-toggle {
+        padding: 16px 101px;
+        &:hover {
+          border: 1px solid $NavyGreen;
+          background-color: initial;
+        }
+      }
+    }
+    .pdf-container {
+      padding: 40px 0 40px;
+      width: 472px;
+      margin: initial;
+      .pdf-button-open {
+        .body {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .blog-view-mob {
+    .blog-content {
+      .H-mob {
+        padding-left: unset;
+        font-weight: 300;
+      }
+    }
+    .module-container {
+      margin-left: unset;
+      &.side-pad {
+        padding-left: unset !important;
+      }
+      &.padding {
+        margin-left: unset;
+      }
+    }
+    .pdf-btn-wrapper {
+      margin: 30px auto 0;
+      justify-content: center;
+      .pdf-btn-toggle {
+        padding: 19px 21px;
+        &:hover {
+          border: 1px solid $LightGrey;
+          background-color: $LightGrey;
+        }
+      }
+    }
+    .pdf-container {
+      padding: 60px 0 0;
+      width: 595px;
+      margin: 0 auto;
+      .pdf-button-open {
+        .body {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .blog-view-mob {
+    .module-container {
+      &.padding {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+      .Sub2 {
+        padding: 0 32px;
+      }
+      .Sub {
+        padding: 0 32px;
+      }
+      .Body {
+        padding: 0 32px;
+        .Sub, .Sub2 {
+          padding: 0;
+        }
+      }
+      &.padding {
+        .Body {
+          padding: 0;
+        }
+      }
+      .pdf-btn-wrapper {
+        margin: 40px auto 20px;
+        .pdf-btn-toggle {
+          width: 100%;
+          padding: 16px;
+          margin-inline: 32px;
+          text-align: center;
+          &:hover {
+            border: 1px solid $NavyGreen;
+            background-color: initial;
+          }
+          &.active {
+            background-color: $NavyGreen;
+            p {
+              color: $White;
+            }
+          }
+        }
+      }
+      .pdf-container {
+        padding: 40px 32px 20px;
+        width: 100%;
+        .pdf-buttons {
+          justify-content: end;
+          .pdf-button-open {
+            right: initial;
+            left: 0;
+            .body {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .link-btn-wrapper {
+        margin-bottom: 10px;
+        .link-btn-toggle {
+          width: 100%;
+          margin-inline: 32px;
+          display: flex;
+          justify-content: center;
+          &:hover {
+            border: 1px solid $NavyGreen;
+            background-color: initial;
+          }
+        }
+      }
+    }
+    .blog-content {
+      .H-mob {
+        padding: 40px 32px 0;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: unset;
+      }
+    }
+  }
+}

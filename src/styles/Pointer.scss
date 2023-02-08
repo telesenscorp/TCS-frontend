@@ -1,0 +1,211 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+$ease: cubic-bezier(0.77, 0, 0.175, 1);
+$speed: 0.4s;
+
+.main-cursor,
+.secondary-cursor {
+  z-index: 10000;
+  pointer-events: none;
+  transform: translate(0, 0);
+  transform-origin: center;
+  position: fixed;
+  overflow: visible;
+  width: 0;
+  height: 0;
+}
+
+.no-cursor {
+  display: none;
+}
+.main-cursor {
+  .main-cursor-background {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    background-color: $White;
+    transition: all $speed $ease;
+    border: 0.5px solid $NavyGreen;
+    &::before,
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      left: 0;
+      position: absolute;
+      background-color: transparent;
+      transition: all $speed $ease 0;
+    }
+    svg {
+      transform: scale(0) rotateZ(0deg);
+      opacity: 0;
+      transition: all $speed $ease;
+      .point,
+      .swipe,
+      .zoom {
+        transition: fill $speed $ease;
+      }
+    }
+  }
+}
+
+.secondary-cursor {
+  mix-blend-mode: difference;
+  .cursor-background {
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $White;
+    opacity: 0.5;
+  }
+}
+
+.arrow-cursor {
+  .cursor-background {
+    opacity: 0;
+    transition: opacity $speed $ease;
+  }
+  .main-cursor {
+    mix-blend-mode: normal;
+    .main-cursor-background {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all $speed $ease;
+      svg {
+        opacity: 1;
+        transition: all $speed $ease;
+        .point,
+        .swipe,
+        .zoom {
+          transition: fill $speed $ease;
+        }
+      }
+    }
+  }
+}
+
+.cursor-wrapper {
+  z-index: 999;
+  &.green-pointer .main-cursor-background {
+    background: $NavyGreen;
+    svg {
+      transform: scale(1) rotateZ(-30deg);
+      .point {
+        fill: $White;
+      }
+    }
+  }
+  &.green-swipe .main-cursor-background {
+    background: $NavyGreen;
+    svg {
+      transform: scale(1) rotateZ(0deg);
+      .swipe {
+        fill: $White;
+      }
+    }
+  }
+  &.white-pointer .main-cursor-background {
+    background: $White;
+    svg {
+      transform: scale(1) rotateZ(-30deg);
+      .point {
+        fill: $NavyGreen;
+      }
+    }
+  }
+  &.zoom .main-cursor-background {
+    background: none;
+    border: none;
+    svg {
+      transform: scale(1) rotateZ(0deg);
+      .zoom {
+        fill: $White;
+      }
+    }
+    .cursor-background {
+      opacity: 0;
+    }
+  }
+  &.white-swipe .main-cursor-background {
+    background: $White;
+    svg {
+      transform: scale(1) rotateZ(0deg);
+      .swipe {
+        fill: $NavyGreen;
+      }
+    }
+  }
+  &.link-pointer {
+    .main-cursor-background {
+      width: 10px;
+      height: 10px;
+      background: $White;
+      transition: all $speed $ease;
+    }
+    .cursor-background {
+      opacity: 0;
+      transition: all $speed $ease;
+    }
+  }
+  &.default .main-cursor-background {
+    width: 16px;
+    height: 16px;
+    background: $White;
+    transition: all $speed $ease;
+  }
+  &.cursor-text {
+    .main-cursor-background {
+      background-color: $JustGrey;
+      border: none;
+      width: 1px;
+      height: 30px;
+      transition: all $speed $ease;
+      &::after,
+      &::before {
+        left: -4px;
+        width: 9px;
+        height: 1px;
+        background-color: $JustGrey;
+        transition: all $speed $ease 100ms;
+      }
+      &::after {
+        top: 0;
+      }
+      &::before {
+        bottom: 0;
+      }
+    }
+    .cursor-background {
+      opacity: 0;
+      transition: all $speed $ease;
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+}
+@media (max-width: 480px) {
+  #cursor {
+    display: none;
+  }
+}

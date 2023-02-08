@@ -1,0 +1,9 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M400 200C400 310.457 310.457 400 200 400C89.5431 400 0 310.457 0 200C0 89.5431 89.5431 0 200 0C310.457 0 400 89.5431 400 200ZM120.37 200C120.37 243.978 156.022 279.63 200 279.63C243.978 279.63 279.63 243.978 279.63 200C279.63 156.022 243.978 120.37 200 120.37C156.022 120.37 120.37 156.022 120.37 200Z" fill="#004D35"/>
+<circle cx="200" cy="200" r="165" stroke="white" transform='rotate(63)' transform-origin='center' stroke-width="10" stroke-linecap="round" stroke-dasharray="180 75"/>
+<path d="M198 32H202V102H198V32Z" fill="white"/>
+<path d="M198 298H202V368H198V298Z" fill="white"/>
+<path d="M368 198V202H298V198H368Z" fill="white"/>
+<path d="M102 198V202H32L32 198H102Z" fill="white"/>
+</svg>
+

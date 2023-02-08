@@ -1,0 +1,217 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+#header-menu {
+  position: relative;
+  z-index: 1000;
+  .menu-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transform-origin: center;
+    &::after {
+      left: 0;
+      top: 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: $White;
+    }
+  }
+  .bordered-white,
+  .bordered-bright-green,
+  .bordered-light-green,
+  .bordered-light-blue,
+  .bordered-soft-blue,
+  .bordered-light-grey,
+  .bordered-yellow {
+    border: 1px solid rgba(#000, 0.1);
+  }
+
+  .bordered-black,
+  .bordered-navy-green,
+  .bordered-navy-blue,
+  .bordered-bright-blue,
+  .bordered-grey-blue,
+  .bordered-midnight-blue,
+  .bordered-grey {
+    border: 1px solid rgba(#fff, 0.5);
+  }
+}
+.menu-bar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transition: all 0.75s ease-out;
+
+  .menu-check {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 22px;
+    height: 12px;
+    margin: auto;
+    position: absolute;
+    span {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-radius: 1px;
+      transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+      &:first-of-type {
+        top: 0;
+        width: 50%;
+      }
+      &:last-of-type {
+        bottom: 0;
+      }
+    }
+    &.active {
+      span:first-of-type {
+        transform: rotate(45deg);
+        top: 5px;
+        width: 100%;
+      }
+      span:last-of-type {
+        transform: rotate(-45deg);
+        bottom: 5px;
+      }
+    }
+  }
+  @media (min-width: 1200px) and (orientation: portrait) {
+    &:hover .menu-check {
+      span:first-of-type {
+        width: 26px;
+      }
+      span:last-of-type {
+        width: 12px;
+      }
+      &.active span {
+        width: 22px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) {
+  #header-menu {
+    position: fixed;
+    right: 32px;
+    .menu-button {
+      width: 40px;
+      height: 40px;
+      &::after {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .menu-bar {
+    width: 40px;
+    height: 40px;
+    .menu-check {
+      width: 14px;
+      height: 8px;
+      margin: auto 12px;
+      span {
+        height: 2px;
+        width: 14px;
+      }
+      &.active {
+        span:first-of-type {
+          top: 3px;
+          width: 100%;
+        }
+        span:last-of-type {
+          bottom: 3px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .main-menu .animated-link .title:hover {
+    span {
+      transform: none;
+      &::before,
+      &::after {
+        transform: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  #header-menu {
+    position: relative;
+    right: unset;
+    .menu-button {
+      width: 80px;
+      height: 80px;
+      &::after {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  .menu-bar {
+    width: 80px;
+    height: 80px;
+    .menu-check {
+      width: 22px;
+      height: 12px;
+      margin: auto;
+      span {
+        width: 100%;
+        height: 2px;
+      }
+      &.active {
+        span:first-of-type {
+          top: 5px;
+          width: 100%;
+        }
+        span:last-of-type {
+          bottom: 5px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .main-menu .animated-link .title:hover {
+    span {
+      transform: translateY(-105%);
+      &::before {
+        transform: skewY(7deg);
+      }
+      &::after {
+        transform: skewY(0);
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  #header-menu {
+    right: 16px;
+  }
+  .main-menu .animated-link .title:hover {
+    span {
+      transform: none;
+      &::before,
+      &::after {
+        transform: none;
+      }
+    }
+  }
+}

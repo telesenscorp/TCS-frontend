@@ -1,0 +1,372 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+.techno-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  position: relative;
+  padding-left: 360px;
+  .slider-side-bar {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 360px;
+    z-index: 1;
+    p {
+      margin: 16px;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      -webkit-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+      position: absolute;
+    }
+  }
+}
+.techno-root {
+  padding: 0 85px 60px;
+  .techno-spacer {
+    height: 100px;
+  }
+  .techno-card + .techno-card {
+    margin-top: -1px;
+  }
+  .techno-card {
+    width: 925px;
+    transition: padding 0.3s ease-in-out, width 0.5s ease-in-out;
+    border-top: 1px solid $White;
+    border-bottom: 1px solid $White;
+    .techno-card-title {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
+      display: flex;
+      justify-content: space-between;
+      transition: padding-left 0.3s ease-in-out, padding-right 0.3s ease-in-out;
+      &:hover {
+        padding-left: 0;
+        padding-right: 10px;
+      }
+      .techno-arrow {
+        background-image: url("../assets/arrow-techno.svg");
+        width: 24px;
+        height: 24px;
+        align-self: center;
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+    &.selected {
+      width: 1135px;
+      .techno-card-title {
+        padding-left: 0;
+        padding-right: 10px;
+        position: sticky;
+        top: 0;
+      }
+      .techno-content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition-delay: 0s, 0s;
+        .variant {
+          width: 190px;
+          height: 190px;
+          opacity: 1;
+          margin-bottom: 20px;
+          transition-delay: 0s, 0.5s, 0.5s;
+          div {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+            .techno-image {
+              height: 174px;
+              transition-delay: 0s;
+            }
+          }
+        }
+      }
+      .techno-arrow {
+        transform: rotate(90deg);
+      }
+    }
+    .techno-content {
+      margin-top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 840px;
+      transition: margin-top 0.5s ease-in-out;
+      transition-delay: 0.5s, 0s;
+      transition-property: grid-gap, margin-top;
+      .variant {
+        opacity: 0;
+        width: 190px;
+        height: 0;
+        margin-right: 20px;
+        margin-bottom: 0;
+        background-color: #eaf5f9;
+        border-radius: 12px;
+        align-self: center;
+        justify-content: center;
+        transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+        transition-delay: 0.5s, 0s, 0s;
+        transition-property: height, opacity, margin-bottom;
+        div {
+          padding-top: 0;
+          padding-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+          height: 0;
+          transition-property: padding-top, padding-bottom, padding-left, padding-right;
+          transition-delay: 0.5s, 0.5s, 0.5s, 0.5s, 0.5s;
+          .techno-image {
+            width: 174px;
+            height: 0;
+            object-fit: scale-down;
+            transition: height 0.5s ease-in-out;
+            transition-delay: 0.5s;
+            transition-property: height;
+          }
+        }
+      }
+    }
+  }
+  .techno-line {
+    width: 925px;
+    height: 1px;
+    background-color: white;
+    z-index: 1;
+    transition: width 0.5s ease-in-out;
+    &.selected {
+      width: 1135px;
+      position: sticky;
+      top: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+  .techno-container {
+    padding-left: 120px;
+    .slider-side-bar {
+      width: 120px;
+    }
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.25) and (min-width: 960px) {
+  .techno-container {
+    padding-left: 360px;
+    .slider-side-bar {
+      width: 360px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .techno-container {
+    padding-left: 0;
+  }
+  .techno-root {
+    padding: 0 64px 60px;
+    width: 100%;
+    .techno-spacer {
+      height: 60px;
+    }
+    .techno-card {
+      width: 100%;
+      .techno-card-title {
+        padding-top: 34px;
+        padding-bottom: 34px;
+        padding-left: 0;
+        padding-right: 20px;
+        &:hover {
+          padding-left: 0;
+          padding-right: 20px;
+        }
+      }
+      &.selected {
+        width: 100%;
+        .techno-card-title {
+          padding-right: 20px;
+        }
+        .techno-content {
+          margin-top: 10px;
+          margin-bottom: 12px;
+          .variant {
+            width: 120px;
+            height: 120px;
+            div {
+              .techno-image {
+                height: 104px;
+              }
+            }
+          }
+        }
+      }
+      .techno-content {
+        width: 100%;
+        .variant {
+          width: 120px;
+          div {
+            .techno-image {
+              width: 104px;
+            }
+          }
+        }
+      }
+      .H5 {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    .techno-line {
+      width: 100%;
+      &.selected {
+        width: 100%;
+        top: 60px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .techno-container {
+    padding-left: 120px;
+    .slider-side-bar {
+      width: 120px;
+    }
+  }
+  .techno-root {
+    padding: 0 85px 60px;
+    width: unset;
+    .techno-spacer {
+      height: 100px;
+    }
+    .techno-card {
+      width: 925px;
+      .techno-card-title {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        &:hover {
+          padding-left: 0;
+          padding-right: 10px;
+        }
+      }
+      &.selected {
+        width: 1135px;
+        .techno-card-title {
+          padding-right: 10px;
+        }
+        .techno-content {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          .variant {
+            width: 190px;
+            height: 190px;
+            div {
+              .techno-image {
+                height: 174px;
+              }
+            }
+          }
+        }
+      }
+      .techno-content {
+        width: initial;
+        .variant {
+          width: 190px;
+          div {
+            .techno-image {
+              width: 174px;
+            }
+          }
+        }
+      }
+      .H5 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .techno-container {
+    padding-left: 0;
+  }
+  .techno-root {
+    padding: 0 16px 60px;
+    width: 100%;
+    .techno-spacer {
+      height: 60px;
+    }
+    .techno-card {
+      width: 100%;
+      .techno-card-title {
+        padding-top: 38px;
+        padding-bottom: 38px;
+        padding-left: 0;
+        padding-right: 20px;
+        &:hover {
+          padding-left: 0;
+          padding-right: 20px;
+        }
+      }
+      &.selected {
+        width: 100%;
+        .techno-card-title {
+          padding-right: 20px;
+        }
+        .techno-content {
+          margin-top: 10px;
+          margin-bottom: 12px;
+          .variant {
+            width: 120px;
+            height: 120px;
+            div {
+              .techno-image {
+                height: 104px;
+              }
+            }
+          }
+        }
+      }
+      .techno-content {
+        width: 100%;
+        .variant {
+          width: 120px;
+          div {
+            .techno-image {
+              width: 104px;
+            }
+          }
+        }
+      }
+      .H5 {
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 600;
+      }
+    }
+    .techno-line {
+      width: 100%;
+      &.selected {
+        width: 100%;
+        top: 60px;
+      }
+    }
+  }
+}

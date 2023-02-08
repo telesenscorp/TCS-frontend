@@ -1,0 +1,83 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+$Font: var(--font);
+.splash {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $NavyGreen;
+  overflow: hidden;
+  .splash-container {
+    svg {
+      text {
+        font-family: $Font;
+        letter-spacing: 10px;
+        stroke: $White;
+        font-size: 150px;
+        font-weight: 100;
+        font-style: italic;
+        stroke-width: 3;
+        animation: textAnimate 4s forwards;
+        fill: $NavyGreen;
+      }
+      text + text {
+        font-weight: 600;
+      }
+    }
+  }
+}
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  10% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  50% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: $NavyGreen;
+  }
+  90% {
+    fill: $White;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1201px) and (-webkit-device-pixel-ratio: 1.25) {
+  .splash {
+    width: 125vw;
+    height: 125vh;
+  }
+}
+@media screen and (max-width: 1536px) and (min-width: 1201px) {}
+@media screen and (max-width: 1200px) and (min-width: 481px) {}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .splash {
+    width: 125vw;
+    height: 125vh;
+  }
+}
+@media (max-width: 480px) {
+  .splash .splash-container svg {
+    transform: scale(0.4);
+  }
+}

@@ -1,0 +1,32 @@
+.text-fall {
+  float: left;
+  clip-path: polygon(0% 0%, 80% 0%, 80% 0%, 0 100%);
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all 1s ease-out;
+  &.animating {
+    // animation: titleAnimation 3s ease-out infinite forwards;
+    transition: all 1s ease-out;
+    transform: translateY(0%);
+    opacity: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+    clip-path: polygon(0% 0%, 80% 0%, 80% 0%, 0 100%);
+  }
+  20% {
+    transform: translateY(0%);
+    opacity: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+  }
+}

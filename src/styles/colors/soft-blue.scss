@@ -1,0 +1,54 @@
+$Blend: var(--soft-blue);
+$White: var(--white);
+.color-soft-blue {
+  color: $Blend;
+}
+.color-after-soft-blue::after,
+.color-before-soft-blue::before {
+  color: $Blend;
+}
+.bg-after-soft-blue::after,
+.bg-before-soft-blue::before,
+.bg-soft-blue,
+.hover-bg-soft-blue:hover {
+  background-color: $Blend;
+}
+.fill-soft-blue {
+  fill: $Blend;
+  & * {
+    fill: $Blend;
+  }
+}
+.bg-gu-soft-blue {
+  background: linear-gradient(180deg, $Blend 0%, $White 100%);
+}
+.bg-gd-soft-blue {
+  background: linear-gradient(0deg, $Blend 0%, $White 100%);
+}
+.scroll-soft-blue {
+  border-color: $Blend !important;
+  &::before {
+    background-color: $Blend !important;
+  }
+}
+.fade-down-soft-blue {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(0deg, $Blend 0%, transparent 100%);
+  }
+}
+.border-color-soft-blue {
+  border-color: $Blend;
+}
+.hover-border-color-soft-blue:hover ~ div.labels {
+  &::before,
+  &::after {
+    border: 1px solid $Blend;
+  }
+}

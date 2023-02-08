@@ -1,0 +1,528 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+$ShadowDown: drop-shadow(0px 9px 15px rgba(0, 0, 0, 0.4));
+$ShadowUp: drop-shadow(0px -9px 15px rgba(0, 0, 0, 0.4));
+// fullscreen paths
+$path-1: path(
+  "M1210.95 523.437C1210.95 555.668 1183.05 585.001 1137.59 606.305C1092.17 627.592 1029.38 640.771 960 640.771C890.621 640.771 827.835 627.592 782.412 606.305C736.949 585.001 709.052 555.668 709.052 523.437C709.052 491.207 736.949 461.874 782.412 440.569C827.835 419.283 890.621 406.104 960 406.104C1029.38 406.104 1092.17 419.283 1137.59 440.569C1183.05 461.874 1210.95 491.207 1210.95 523.437Z"
+);
+$path-2: path(
+  "M1336.15 523.438C1336.15 571.937 1294.24 616 1226.12 647.966C1158.04 679.914 1063.95 699.688 960 699.688C856.049 699.688 761.963 679.914 693.884 647.966C625.765 616 583.854 571.937 583.854 523.438C583.854 474.938 625.765 430.875 693.884 398.909C761.963 366.961 856.049 347.188 960 347.188C1063.95 347.188 1158.04 366.961 1226.12 398.909C1294.24 430.875 1336.15 474.938 1336.15 523.438Z"
+);
+$path-3: path(
+  "M1466.6 524.49C1466.6 589.549 1410.33 648.603 1318.98 691.422C1227.67 734.222 1101.5 760.708 962.104 760.708C822.709 760.708 696.534 734.222 605.227 691.422C513.881 648.603 457.604 589.549 457.604 524.49C457.604 459.43 513.881 400.376 605.227 357.557C696.534 314.757 822.709 288.271 962.104 288.271C1101.5 288.271 1227.67 314.757 1318.98 357.557C1410.33 400.376 1466.6 459.43 1466.6 524.49Z"
+);
+$path-4: path(
+  "M1592.85 523.438C1592.85 605.057 1522.21 679.103 1407.64 732.774C1293.1 786.427 1134.84 819.625 960 819.625C785.161 819.625 626.898 786.427 512.363 732.774C397.789 679.103 327.146 605.057 327.146 523.438C327.146 441.818 397.789 367.772 512.363 314.101C626.898 260.448 785.161 227.25 960 227.25C1134.84 227.25 1293.1 260.448 1407.64 314.101C1522.21 367.772 1592.85 441.818 1592.85 523.438Z"
+);
+$path-5: path(
+  "M1718.05 523.438C1718.05 621.326 1633.4 710.102 1496.17 774.435C1358.97 838.749 1169.41 878.542 960 878.542C750.588 878.542 561.026 838.749 423.835 774.435C286.604 710.102 201.948 621.326 201.948 523.438C201.948 425.549 286.604 336.773 423.835 272.44C561.026 208.126 750.588 168.333 960 168.333C1169.41 168.333 1358.97 208.126 1496.17 272.44C1633.4 336.773 1718.05 425.549 1718.05 523.438Z"
+);
+$path-6: path(
+  "M1844.3 523.438C1844.3 637.596 1745.51 741.101 1585.44 816.095C1425.4 891.071 1204.27 937.458 960 937.458C715.725 937.458 494.6 891.071 334.563 816.095C174.485 741.101 75.6979 637.596 75.6979 523.438C75.6979 409.279 174.485 305.774 334.563 230.78C494.6 155.804 715.725 109.417 960 109.417C1204.27 109.417 1425.4 155.804 1585.44 230.78C1745.51 305.774 1844.3 409.279 1844.3 523.438Z"
+);
+$path-7: path(
+  "M1969.5 523.438C1969.5 653.865 1856.7 772.099 1673.97 857.756C1491.27 943.393 1238.85 996.375 960 996.375C681.153 996.375 428.728 943.393 246.034 857.756C63.3006 772.099 -49.5 653.865 -49.5 523.438C-49.5 393.01 63.3006 274.776 246.034 189.119C428.728 103.482 681.153 50.5 960 50.5C1238.85 50.5 1491.27 103.482 1673.97 189.119C1856.7 274.776 1969.5 393.01 1969.5 523.438Z"
+);
+// end of fullscreen paths
+
+// fullscreen shadow paths
+// $shadow-7: path(
+//   "M1969.5 523.439C1969.5 651.614 1856.71 767.815 1673.97 852C1491.27 936.166 1238.85 988.237 960 988.237C681.152 988.237 428.726 936.166 246.031 852C63.2939 767.815 -49.5 651.614 -49.5 523.439C-49.5 395.263 63.2939 279.063 246.031 194.877C428.726 110.712 681.152 58.6406 960 58.6406C1238.85 58.6406 1491.27 110.712 1673.97 194.877C1856.71 279.063 1969.5 395.263 1969.5 523.439Z"
+// );
+// $shadow-6: path(
+//   "M1844.3 523.441C1844.3 635.627 1745.52 737.351 1585.44 811.058C1425.4 884.746 1204.28 930.336 960 930.336C715.724 930.336 494.598 884.746 334.56 811.058C174.479 737.351 75.6982 635.627 75.6982 523.441C75.6982 411.256 174.479 309.531 334.56 235.824C494.598 162.137 715.724 116.547 960 116.547C1204.28 116.547 1425.4 162.137 1585.44 235.824C1745.52 309.531 1844.3 411.256 1844.3 523.441Z"
+// );
+// $shadow-5: path(
+//   "M1718.05 523.436C1718.05 619.632 1633.4 706.88 1496.17 770.109C1358.98 833.318 1169.41 872.427 960 872.427C750.587 872.427 561.024 833.318 423.832 770.109C286.598 706.88 201.948 619.632 201.948 523.436C201.948 427.24 286.598 339.991 423.832 276.763C561.024 213.554 750.587 174.445 960 174.445C1169.41 174.445 1358.98 213.554 1496.17 276.763C1633.4 339.991 1718.05 427.24 1718.05 523.436Z"
+// );
+// $shadow-4: path(
+//   "M1592.85 523.438C1592.85 603.645 1522.22 676.417 1407.64 729.167C1293.1 781.898 1134.84 814.525 960 814.525C785.159 814.525 626.895 781.898 512.36 729.167C397.782 676.417 327.146 603.645 327.146 523.438C327.146 443.232 397.782 370.46 512.36 317.71C626.895 264.979 785.159 232.352 960 232.352C1134.84 232.352 1293.1 264.979 1407.64 317.71C1522.22 370.46 1592.85 443.232 1592.85 523.438Z"
+// );
+// $shadow-3: path(
+//   "M1466.6 524.469C1466.6 588.401 1410.33 646.439 1318.98 688.523C1227.68 730.588 1101.5 756.618 962.104 756.618C822.708 756.618 696.532 730.588 605.225 688.523C513.874 646.439 457.604 588.401 457.604 524.469C457.604 460.538 513.874 402.5 605.225 360.416C696.532 318.351 822.708 292.32 962.104 292.32C1101.5 292.32 1227.68 318.351 1318.98 360.416C1410.33 402.5 1466.6 460.538 1466.6 524.469Z"
+// );
+// $shadow-2: path(
+//   "M1336.15 523.438C1336.15 571.094 1294.24 614.398 1226.12 645.816C1158.04 677.215 1063.95 696.649 960 696.649C856.048 696.649 761.961 677.215 693.881 645.816C625.758 614.398 583.854 571.094 583.854 523.438C583.854 475.782 625.758 432.478 693.881 401.059C761.961 369.661 856.048 350.227 960 350.227C1063.95 350.227 1158.04 369.661 1226.12 401.059C1294.24 432.478 1336.15 475.782 1336.15 523.438Z"
+// );
+// $shadow-1: path(
+//   "M1210.95 523.44C1210.95 555.107 1183.06 583.934 1137.59 604.875C1092.17 625.795 1029.38 638.748 960 638.748C890.62 638.748 827.832 625.795 782.408 604.875C736.942 583.934 709.052 555.107 709.052 523.44C709.052 491.774 736.942 462.946 782.408 442.006C827.832 421.086 890.62 408.133 960 408.133C1029.38 408.133 1092.17 421.086 1137.59 442.006C1183.06 462.946 1210.95 491.774 1210.95 523.44Z"
+// );
+// end of fullscreen shadow paths
+
+// tablet paths
+$t-path-1: path(
+  "M1186.5 236.5C1186.5 260.66 1172.42 283.748 1146.8 304.816C1121.18 325.88 1084.08 344.873 1038.19 360.832C946.419 392.75 819.602 412.5 679.5 412.5C539.398 412.5 412.581 392.75 320.808 360.832C274.918 344.873 237.818 325.88 212.199 304.816C186.578 283.748 172.5 260.66 172.5 236.5C172.5 212.34 186.578 189.252 212.199 168.184C237.818 147.12 274.918 128.127 320.808 112.168C412.581 80.2505 539.398 60.5 679.5 60.5C819.602 60.5 946.419 80.2505 1038.19 112.168C1084.08 128.127 1121.18 147.12 1146.8 168.184C1172.42 189.252 1186.5 212.34 1186.5 236.5Z"
+);
+$t-path-2: path(
+  "M1359.5 236.5C1359.5 268.944 1340.6 299.924 1306.24 328.17C1271.9 356.413 1222.17 381.87 1160.67 403.259C1037.68 446.034 867.736 472.5 680 472.5C492.264 472.5 322.322 446.034 199.332 403.259C137.834 381.87 88.1027 356.413 53.7553 328.17C19.4046 299.924 0.5 268.944 0.5 236.5C0.5 204.056 19.4046 173.076 53.7553 144.83C88.1027 116.587 137.834 91.13 199.332 69.7415C322.322 26.9662 492.264 0.5 680 0.5C867.736 0.5 1037.68 26.9662 1160.67 69.7415C1222.17 91.13 1271.9 116.587 1306.24 144.83C1340.6 173.076 1359.5 204.056 1359.5 236.5Z"
+);
+$t-path-3: path(
+  "M1017.5 236C1017.5 252.083 1008.15 267.477 991.081 281.545C974.015 295.611 949.289 308.3 918.691 318.966C857.5 340.297 772.933 353.5 679.5 353.5C586.067 353.5 501.5 340.297 440.309 318.966C409.711 308.3 384.985 295.611 367.919 281.545C350.849 267.477 341.5 252.083 341.5 236C341.5 219.917 350.849 204.523 367.919 190.455C384.985 176.389 409.711 163.7 440.309 153.034C501.5 131.703 586.067 118.5 679.5 118.5C772.933 118.5 857.5 131.703 918.691 153.034C949.289 163.7 974.015 176.389 991.081 190.455C1008.15 204.523 1017.5 219.917 1017.5 236Z"
+);
+// end of tablet paths
+
+.partners-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .partners {
+    height: 1046px;
+    width: 1920px;
+    position: relative;
+    .partner-list {
+      @supports (offset-path: path("")) {
+        .dynamic {
+          top: 0;
+          left: 0;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          filter: grayscale(100%) drop-shadow(0px -2px 16px rgba(0, 0, 0, 0.4));
+          &:hover {
+            filter: grayscale(0%) drop-shadow(0px -2px 16px rgba(0, 0, 0, 0.4));
+          }
+          &.offset-0 {
+            animation-name: move0;
+          }
+          &.offset-1 {
+            animation-name: move1;
+          }
+          &.offset-2 {
+            animation-name: move2;
+          }
+          &.offset-3 {
+            animation-name: move3;
+          }
+          &.offset-4 {
+            animation-name: move4;
+          }
+          &.offset-5 {
+            animation-name: move5;
+          }
+          &.offset-6 {
+            animation-name: move6;
+          }
+          &.offset-7 {
+            animation-name: move7;
+          }
+          &.offset-8 {
+            animation-name: move8;
+          }
+          &.offset-9 {
+            animation-name: move9;
+          }
+          &.line-0 {
+            animation-duration: 60s;
+            offset-path: $path-1;
+            z-index: 7;
+          }
+          &.line-1 {
+            animation-duration: 65s;
+            offset-path: $path-2;
+            z-index: 6;
+          }
+          &.line-2 {
+            animation-duration: 60s;
+            offset-path: $path-3;
+            z-index: 5;
+          }
+          &.line-3 {
+            animation-duration: 75s;
+            offset-path: $path-4;
+            z-index: 4;
+          }
+          &.line-4 {
+            animation-duration: 50s;
+            offset-path: $path-5;
+            z-index: 3;
+          }
+          &.line-5 {
+            animation-duration: 60s;
+            offset-path: $path-6;
+            z-index: 2;
+          }
+          &.line-6 {
+            animation-duration: 55s;
+            offset-path: $path-7;
+            z-index: 1;
+          }
+        }
+      }
+      .static-pos {
+        img {
+          filter: grayscale(100%);
+          &:hover {
+            filter: grayscale(0%);
+          }
+        }
+        &.pos-0 {
+          top: 506px;
+          left: 1118px;
+          filter: $ShadowDown;
+        }
+        &.pos-1 {
+          top: 146px;
+          left: 645px;
+          filter: $ShadowDown;
+        }
+        &.pos-2 {
+          top: 293px;
+          left: 1048px;
+          filter: $ShadowUp;
+        }
+        &.pos-3 {
+          top: 690px;
+          left: 1048px;
+          filter: $ShadowDown;
+        }
+        &.pos-3 {
+          top: 528px;
+          left: 1518px;
+          filter: $ShadowDown;
+        }
+        &.pos-4 {
+          top: 790px;
+          left: 1460px;
+          filter: $ShadowDown;
+        }
+        &.pos-5 {
+          top: 263px;
+          left: 1533px;
+          filter: $ShadowUp;
+        }
+        &.pos-6 {
+          top: 115px;
+          left: 970px;
+          filter: $ShadowUp;
+        }
+        &.pos-7 {
+          top: 376px;
+          left: 709px;
+          filter: $ShadowUp;
+        }
+        &.pos-8 {
+          top: 560px;
+          left: 450px;
+          filter: $ShadowDown;
+        }
+        &.pos-9 {
+          top: 17px;
+          left: 1250px;
+          filter: $ShadowUp;
+        }
+        &.pos-10 {
+          top: 750px;
+          left: 816px;
+          filter: $ShadowDown;
+        }
+        &.pos-11 {
+          top: 784px;
+          left: 357px;
+          filter: $ShadowDown;
+        }
+        &.pos-12 {
+          top: 657px;
+          left: 123px;
+          filter: $ShadowDown;
+        }
+        &.pos-13 {
+          top: 875px;
+          left: 690px;
+          filter: $ShadowDown;
+        }
+        &.pos-14 {
+          top: 655px;
+          left: 1192px;
+          filter: $ShadowDown;
+        }
+      }
+      .shadow-partner {
+        position: absolute;
+        offset-rotate: 0deg;
+        img {
+          width: 120px;
+          height: 120px;
+          object-fit: scale-down;
+          filter: blur(15px) grayscale(100%);
+        }
+      }
+      .partner {
+        position: absolute;
+        offset-rotate: 0deg;
+        img {
+          width: 120px;
+          height: 120px;
+          object-fit: scale-down;
+        }
+      }
+    }
+  }
+}
+
+.partners-tablet {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 50px 64px 80px;
+  .partners {
+    height: 473px;
+    width: 1360px;
+    position: relative;
+    .partner-list {
+      @supports (offset-path: path("")) {
+        .partner {
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          &.offset-0 {
+            animation-name: move0;
+          }
+          &.offset-1 {
+            animation-name: move1;
+          }
+          &.offset-2 {
+            animation-name: move2;
+          }
+          &.offset-3 {
+            animation-name: move3;
+          }
+          &.offset-4 {
+            animation-name: move4;
+          }
+          &.offset-5 {
+            animation-name: move5;
+          }
+          &.offset-6 {
+            animation-name: move6;
+          }
+          &.offset-7 {
+            animation-name: move7;
+          }
+          &.offset-8 {
+            animation-name: move8;
+          }
+          &.offset-9 {
+            animation-name: move9;
+          }
+          &.line-0 {
+            animation-duration: 60s;
+            offset-path: $t-path-1;
+            z-index: 2;
+          }
+          &.line-1 {
+            animation-duration: 65s;
+            offset-path: $t-path-2;
+          }
+          &.line-2 {
+            animation-duration: 45s;
+            offset-path: $t-path-3;
+            z-index: 3;
+          }
+          position: absolute;
+          top: 0;
+          left: 0;
+          offset-rotate: 0deg;
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: scale-down;
+            filter: grayscale(100%) drop-shadow(0px -2px 16px rgba(0, 0, 0, 0.2));
+            &:hover {
+              filter: grayscale(0%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.partners-mob {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  .hinge {
+    position: absolute;
+    right: -250px;
+    top: 0;
+    background-image: url("../assets/hinge.png");
+    width: 400px;
+    aspect-ratio: 1 / 1;
+  }
+  .hinge-msg {
+    position: absolute;
+    right: 16px;
+    top: 400px;
+    width: 134px;
+    color: $JustGrey;
+    opacity: 40%;
+    transition: opacity 0.5s ease-out;
+  }
+  .blocker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60vw;
+    height: 100%;
+    z-index: 2;
+    &::after,
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url("../assets/cil.svg");
+      position: absolute;
+      right: -12px;
+      top: 0;
+    }
+    &::after {
+      top: 376px;
+      transform: scaleY(-1);
+    }
+  }
+  .partners {
+    z-index: 1;
+    width: 100%;
+    height: 464px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    .partner-list {
+      display: flex;
+      flex-direction: column;
+      .partner {
+        scroll-snap-align: start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 400px;
+        padding: 5px;
+        img {
+          width: 100%;
+          object-fit: scale-down;
+        }
+        &.last-partner {
+          margin-bottom: 64px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes move0 {
+  0% {
+    offset-distance: 0;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+@keyframes move1 {
+  0% {
+    offset-distance: 20%;
+  }
+  100% {
+    offset-distance: 120%;
+  }
+}
+@keyframes move2 {
+  0% {
+    offset-distance: 40%;
+  }
+  100% {
+    offset-distance: 140%;
+  }
+}
+@keyframes move3 {
+  0% {
+    offset-distance: 60%;
+  }
+  100% {
+    offset-distance: 160%;
+  }
+}
+@keyframes move4 {
+  0% {
+    offset-distance: 80%;
+  }
+  100% {
+    offset-distance: 180%;
+  }
+}
+@keyframes move5 {
+  0% {
+    offset-distance: 110%;
+  }
+  100% {
+    offset-distance: 210%;
+  }
+}
+@keyframes move6 {
+  0% {
+    offset-distance: 130%;
+  }
+  100% {
+    offset-distance: 230%;
+  }
+}
+@keyframes move7 {
+  0% {
+    offset-distance: 150%;
+  }
+  100% {
+    offset-distance: 250%;
+  }
+}
+@keyframes move8 {
+  0% {
+    offset-distance: 170%;
+  }
+  100% {
+    offset-distance: 270%;
+  }
+}
+@keyframes move9 {
+  0% {
+    offset-distance: 190%;
+  }
+  100% {
+    offset-distance: 290%;
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .partners-section {
+    justify-content: unset;
+  }
+  @media screen and (orientation: portrait) {
+    .partners-tablet .partners .telesens-logo-icon {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .partners-section {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+}

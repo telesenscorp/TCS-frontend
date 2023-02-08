@@ -1,0 +1,89 @@
+$Black: var(--black);
+$White: var(--white);
+.contrast-ab-white,
+.contrast-ab-bright-green,
+.contrast-ab-light-green,
+.contrast-ab-light-blue,
+.contrast-ab-soft-blue,
+.contrast-ab-light-grey,
+.contrast-ab-orange,
+.contrast-ab-blend-a,
+.contrast-ab-blend-b,
+.contrast-ab-blend-c,
+.contrast-ab-yellow {
+  &::before,
+  &::after {
+    color: $Black;
+  }
+}
+
+.contrast-ab-black,
+.contrast-ab-navy-green,
+.contrast-ab-navy-blue,
+.contrast-ab-bright-blue,
+.contrast-ab-grey-blue,
+.contrast-ab-midnight-blue,
+.contrast-ab-dark-blend-a,
+.contrast-ab-dark-blend-b,
+.contrast-ab-dark-blend-c,
+.contrast-ab-grey {
+  &::before,
+  &::after {
+    color: $White;
+  }
+}
+
+.contrast-color-white,
+.contrast-color-bright-green,
+.contrast-color-light-green,
+.contrast-color-light-blue,
+.contrast-color-soft-blue,
+.contrast-color-light-grey,
+.contrast-color-blend-a,
+.contrast-color-blend-b,
+.contrast-color-blend-c,
+.contrast-color-yellow {
+  color: $Black !important;
+}
+
+.contrast-color-black,
+.contrast-color-transparent,
+.contrast-color-navy-green,
+.contrast-color-navy-blue,
+.contrast-color-bright-blue,
+.contrast-color-grey-blue,
+.contrast-color-midnight-blue,
+.contrast-color-orange,
+.contrast-color-dark-blend-a,
+.contrast-color-dark-blend-b,
+.contrast-color-dark-blend-c,
+.contrast-color-grey {
+  color: $White !important;
+}
+
+.contrast-bg-white,
+.contrast-bg-bright-green,
+.contrast-bg-light-green,
+.contrast-bg-light-blue,
+.contrast-bg-soft-blue,
+.contrast-bg-light-grey,
+.contrast-bg-blend-a,
+.contrast-bg-blend-b,
+.contrast-bg-blend-c,
+.contrast-bg-yellow {
+  background-color: $Black;
+}
+
+.contrast-bg-black,
+.contrast-bg-navy-green,
+.contrast-bg-navy-blue,
+.contrast-bg-bright-blue,
+.contrast-bg-grey-blue,
+.contrast-bg-midnight-blue,
+.contrast-bg-orange,
+.contrast-bg-dark-blend-a,
+.contrast-bg-dark-blend-b,
+.contrast-bg-dark-blend-c,
+.contrast-bg-grey {
+  background-color: $White;
+}

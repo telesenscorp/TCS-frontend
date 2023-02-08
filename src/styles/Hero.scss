@@ -1,0 +1,327 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+.hero-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 144px);
+  min-height: 600px;
+  .hero-desc {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    .hero-button {
+      margin-top: -20px;
+      width: fit-content;
+      a div {
+        background-image: url("../assets/in-touch.svg");
+        width: 200px;
+        aspect-ratio: 1 / 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    .description {
+      max-width: 400px;
+      align-self: end;
+    }
+  }
+  .scroll-down {
+    width: 20px;
+    height: 34px;
+    margin-left: -20px;
+    bottom: 40px;
+    margin-top: -35px;
+    border: 1px solid $White;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    &:before {
+      position: absolute;
+      left: 50%;
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: $White;
+      margin-left: -4px;
+      top: 8px;
+      border-radius: 4px;
+      animation: scroll 1.5s infinite;
+    }
+  }
+  .scroll-text {
+    display: none;
+  }
+  .block .motto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .line {
+      display: flex;
+      flex-direction: row;
+      .box .H2 {
+        overflow: hidden;
+        transition: all ease-in-out;
+      }
+    }
+  }
+}
+
+.full-size {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.background-img {
+  object-fit: contain;
+  background-size: contain;
+}
+.parallax-background-img {
+  background-image: url("../assets/texture-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120% 120%;
+  opacity: 0.2;
+  filter: contrast(200%);
+}
+
+.char {
+  animation: insert 1s ease-out 1 both;
+  display: inline-block;
+}
+
+#floating-pointer {
+  animation: wiggle 3s ease-in-out infinite alternate;
+}
+@media screen and (min-width: 1201px) and (-webkit-device-pixel-ratio: 1.25) {
+  .hero-root {
+    height: calc(125vh - 144px);
+  }
+  .full-size {
+    height: 125vh;
+    min-height: 800px;
+  }
+}
+@media screen and (max-width: 1536px) and (min-width: 1200px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .background-img {
+    display: none;
+  }
+  .hero-root {
+    height: max-content;
+    position: relative;
+    .hero-desc {
+      margin-top: 64px;
+      align-items: center;
+      .hero-button {
+        margin: 0 30px 0 10px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a div {
+          background-image: url("../assets/in-touch.svg");
+          width: 100px;
+          aspect-ratio: 1 / 1;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      .description {
+        max-width: 300px;
+      }
+    }
+    .scroll-down {
+      display: none;
+    }
+    .scroll-text {
+      top: 40vh;
+      right: 32px;
+      display: flex;
+      gap: 6px;
+      position: absolute;
+      writing-mode: vertical-rl;
+    }
+    @media (orientation: portrait) {
+      .scroll-text {
+        top: 25vh;
+        right: 32px;
+        display: flex;
+        gap: 6px;
+        position: absolute;
+        writing-mode: vertical-rl;
+      }
+    }
+    .block {
+      padding: 60px 32px;
+      position: relative;
+      .motto {
+        align-items: unset;
+        .H2 {
+          max-width: 600px;
+          font-size: 72px;
+          line-height: 84px;
+        }
+      }
+    }
+    .Body {
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .background-img {
+    display: unset;
+  }
+  .hero-root {
+    height: calc(125vh - 144px);
+    position: unset;
+    .hero-desc {
+      margin-top: 20px;
+      align-items: unset;
+      .hero-button {
+        margin: unset;
+        margin-top: -20px;
+        flex: unset;
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+        a div {
+          background-image: url("../assets/in-touch.svg");
+          width: 200px;
+          aspect-ratio: 1 / 1;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      .description {
+        max-width: 400px;
+      }
+    }
+    .scroll-down {
+      display: unset;
+    }
+    .scroll-text {
+      display: none;
+    }
+    .block {
+      padding: unset;
+      position: unset;
+      .motto {
+        align-items: center;
+        .H2 {
+          max-width: unset;
+          font-size: 104px;
+          line-height: 122px;
+        }
+      }
+    }
+    .Body {
+      font-size: 16px;
+    }
+  }
+  .full-size {
+    height: 125vh;
+    min-height: 800px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .background-img {
+    display: none;
+  }
+  .hero-root {
+    height: max-content;
+    position: relative;
+    .hero-desc {
+      padding: 32px 16px 0;
+      margin-top: unset;
+      flex-direction: column-reverse;
+      gap: 30px;
+      .description {
+        max-width: 300px;
+        align-self: unset;
+      }
+      .hero-button {
+        display: flex;
+        justify-content: center;
+        margin-top: unset;
+        align-self: center;
+        transform: scale(0.5);
+        flex: 1;
+      }
+      .Body {
+        font-size: 14px;
+      }
+    }
+    .scroll-down {
+      display: none;
+    }
+    .scroll-text {
+      top: 55%;
+      right: 16px;
+      display: flex;
+      gap: 6px;
+      position: absolute;
+      writing-mode: vertical-rl;
+    }
+    .block .motto {
+      margin-top: 15vh;
+      align-items: flex-start;
+      .H2 {
+        max-width: 342px;
+        text-orientation: mixed;
+        font-size: 40px;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 49px;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+@keyframes insert {
+  from {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}

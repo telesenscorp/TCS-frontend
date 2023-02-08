@@ -1,0 +1,237 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+footer {
+  display: flex;
+  padding: 100px 40px 80px;
+  justify-content: center;
+  .top-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .pages,
+    .follow {
+      flex: 1;
+    }
+    .pages {
+      .Sub {
+        font-style: italic;
+      }
+    }
+    .contacts {
+      flex: 2;
+    }
+  }
+  .label {
+    margin-bottom: 20px;
+  }
+  .contact-title:not(:first-child) {
+    margin-top: 60px;
+  }
+  ul {
+    list-style: none;
+  }
+  .bottom-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  a {
+    width: fit-content;
+  }
+  a:hover {
+    color: $BrightGreen;
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  footer {
+    display: flex;
+    padding: 122px 64px 70px;
+    justify-content: center;
+    .top-footer {
+      display: flex;
+      flex-direction: row;
+      .pages {
+        flex: initial;
+        .label {
+          margin-bottom: 20px;
+        }
+      }
+      .contacts {
+        .link-label {
+          .Body {
+            font-size: 14px;
+          }
+        }
+      }
+      .follow,
+      .contacts {
+        flex: initial;
+        .Sub {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 19px;
+        }
+      }
+    }
+    .label {
+      margin-bottom: 10px;
+    }
+    .contact-title:not(:first-child) {
+      margin-top: 30px;
+    }
+    ul {
+      list-style: none;
+    }
+    .bottom-footer {
+      margin-top: 40px;
+      .Body {
+        font-size: 12px;
+      }
+      svg {
+        width: 100px;
+      }
+    }
+    .animated-link .title:hover {
+      span {
+        transform: none;
+        &::before,
+        &::after {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  footer {
+    padding: 100px 40px 80px;
+    .top-footer {
+      .pages,
+      .follow {
+        flex: 1;
+      }
+      .contacts {
+        .link-label {
+          .Body {
+            font-size: 16px;
+          }
+        }
+      }
+      .contacts {
+        flex: 2;
+      }
+      .follow,
+      .contacts {
+        .Sub {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28px;
+        }
+      }
+    }
+    .label {
+      margin-bottom: 20px;
+    }
+    .contact-title:not(:first-child) {
+      margin-top: 60px;
+    }
+    .bottom-footer {
+      margin-top: 100px;
+      .Body {
+        font-size: 16px;
+      }
+      svg {
+        width: unset;
+      }
+    }
+    .animated-link .title:hover span {
+      transform: translateY(-105%);
+      &::before {
+        transform: skewY(7deg);
+      }
+      &::after {
+        transform: skewY(0);
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 160px 32px 60px;
+    .top-footer {
+      flex-direction: column;
+      .pages li .Sub {
+        font-style: italic;
+      }
+      .contacts {
+        margin: 40px 0 60px;
+        .contact-title:not(:first-child) {
+          margin-top: 30px;
+        }
+        .label {
+          margin-bottom: 10px;
+        }
+        .label .Sub {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 140%;
+        }
+        .link-label .Body {
+          font-size: 14px;
+          line-height: 140%;
+        }
+      }
+      .follow {
+        .label .Sub {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 140%;
+        }
+        .link-label {
+          margin-bottom: 4px;
+          .Body {
+            line-height: 140%;
+          }
+        }
+      }
+    }
+    .bottom-footer {
+      flex-direction: column;
+      margin-top: 60px;
+      svg {
+        transform: scale(0.65) translateX(-26px);
+        align-self: flex-start;
+        margin-bottom: 40px;
+      }
+      .Body {
+        font-size: 12px;
+        line-height: 140%;
+      }
+    }
+    .animated-link .title:hover {
+      span {
+        transform: none;
+        &::before,
+        &::after {
+          transform: none;
+        }
+      }
+    }
+  }
+}

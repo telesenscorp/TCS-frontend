@@ -1,0 +1,128 @@
+$NavyGreen: var(--navy-green);
+$LightGrey: var(--light-grey);
+$White: var(--white);
+.pdf-page {
+  padding: 120px 0 0;
+  .content {
+    margin: 0 auto;
+    width: 90%;
+    .btn {
+      width: fit-content;
+      width: -moz-fit-content;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid $NavyGreen;
+      padding: 13px 24px;
+      &:hover {
+        background-color: $LightGrey;
+        border: 1px solid $LightGrey;
+      }
+      &.download {
+        svg {
+          width: 14px;
+          height: 17px;
+          path {
+            fill: $NavyGreen;
+          }
+        }
+      }
+    }
+    .title {
+      margin: 60px 0;
+    }
+    .pdf {
+      .react-pdf__Page {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .pdf-page-mob {
+    padding: 40px 64px 20px;
+    .content {
+      .btn-wrapper {
+        width: fit-content;
+      }
+      .btn {
+        padding: 8px 0;
+        p {
+          font-size: 16px;
+          line-height: 140%;
+        }
+        &.back {
+          p {
+            margin-left: 10px;
+          }
+        }
+        &.download {
+          width: fit-content;
+          padding: 17px 120px;
+          background-color: $NavyGreen;
+          p {
+            color: white;
+            margin-right: 15px;
+          }
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+      .title {
+        margin: 30px 0;
+      }
+      .pdf {
+        .react-pdf__Page {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .pdf-page-mob {
+    padding: 40px 32px 20px;
+    .content {
+      .btn-wrapper {
+        width: initial;
+      }
+      .btn {
+        padding: 8px 0;
+        p {
+          font-size: 16px;
+          line-height: 140%;
+        }
+        &.back {
+          p {
+            margin-left: 10px;
+          }
+        }
+        &.download {
+          width: 100%;
+          padding: 17px 0;
+          background-color: $NavyGreen;
+          p {
+            color: white;
+            margin-right: 15px;
+          }
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+      .title {
+        margin: 30px 0;
+      }
+      .pdf {
+        .react-pdf__Page {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+$Blend: var(--midnight-blue);
+$White: var(--white);
+.color-midnight-blue {
+  color: $Blend;
+}
+.color-after-midnight-blue::after,
+.color-before-midnight-blue::before {
+  color: $Blend;
+}
+.bg-after-midnight-blue::after,
+.bg-before-midnight-blue::before,
+.bg-midnight-blue,
+.hover-bg-midnight-blue:hover {
+  background-color: $Blend;
+}
+.fill-midnight-blue {
+  fill: $Blend;
+  & * {
+    fill: $Blend;
+  }
+}
+.bg-gu-midnight-blue {
+  background: linear-gradient(180deg, $Blend 0%, $White 100%);
+}
+.bg-gd-midnight-blue {
+  background: linear-gradient(0deg, $Blend 0%, $White 100%);
+}
+.scroll-midnight-blue {
+  border-color: $Blend !important;
+  &::before {
+    background-color: $Blend !important;
+  }
+}
+.fade-down-midnight-blue {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(0deg, $Blend 0%, transparent 100%);
+  }
+}
+.border-color-midnight-blue {
+  border-color: $Blend;
+}
+.hover-border-color-midnight-blue:hover ~ div.labels {
+  &::before,
+  &::after {
+    border: 1px solid $Blend;
+  }
+}

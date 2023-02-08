@@ -1,0 +1,66 @@
+@use "styles/Theme.scss";
+@use "styles/Root.scss";
+@use "styles/colors/transparent.scss";
+@use "styles/colors/black.scss";
+@use "styles/colors/white.scss";
+@use "styles/colors/navy-green.scss";
+@use "styles/colors/bright-green.scss";
+@use "styles/colors/light-green.scss";
+@use "styles/colors/navy-blue.scss";
+@use "styles/colors/bright-blue.scss";
+@use "styles/colors/light-blue.scss";
+@use "styles/colors/soft-blue.scss";
+@use "styles/colors/midnight-blue.scss";
+@use "styles/colors/grey-blue.scss";
+@use "styles/colors/just-grey.scss";
+@use "styles/colors/light-grey.scss";
+@use "styles/colors/yellow.scss";
+@use "styles/colors/orange.scss";
+@use "styles/colors/blend-a.scss";
+@use "styles/colors/blend-b.scss";
+@use "styles/colors/blend-c.scss";
+@use "styles/colors/dark-blend-a.scss";
+@use "styles/colors/dark-blend-b.scss";
+@use "styles/colors/dark-blend-c.scss";
+@use "styles/colors/contrast.scss";
+@use "styles/Form.scss";
+@use "styles/Sliders.scss";
+@use "styles/SingleQuote.scss";
+@use "styles/Counter.scss";
+@use "styles/Header.scss";
+@use "styles/Hero.scss";
+@use "styles/Menu.scss";
+@use "styles/Pointer.scss";
+@use "styles/Services.scss";
+@use "styles/Values.scss";
+@use "styles/Banner.scss";
+@use "styles/Footer.scss";
+@use "styles/Technologies.scss";
+@use "styles/Partners.scss";
+@use "styles/Input.scss";
+@use "styles/Industries.scss";
+@use "styles/NotFound.scss";
+@use "styles/TextModule.scss";
+@use "styles/Subscribe.scss";
+@use "styles/Gallery.scss";
+@use "styles/Vacancies.scss";
+@use "styles/CookiePopup.scss";
+@use "styles/Blog.scss";
+@use "styles/Calculator.scss";
+@use "styles/Snackbar.scss";
+@use "styles/Animations.scss";
+@use "styles/PDF.scss";
+body {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--white);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--navy-green);
+  }
+}
+html {
+  scroll-behavior: var(--smoothy);
+}

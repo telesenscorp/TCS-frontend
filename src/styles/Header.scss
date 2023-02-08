@@ -1,0 +1,573 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+$Font: var(--font);
+header {
+  width: 100%;
+  display: flex;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+  // padding-bottom: 60px;
+  .root {
+    flex: 1;
+    display: flex;
+    max-width: 1280px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+}
+.main-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  transition: z-index 1s ease;
+  .main-menu-picture {
+    display: none;
+    position: absolute;
+    left: calc(50% - 133px);
+    top: -150px;
+    width: 265px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    transform-origin: center;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0) rotate(15deg);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+  .menu {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-out;
+  }
+  .up {
+    opacity: 0;
+    // transition: opacity 1s ease-out;
+    .main-links {
+      :nth-child(even) {
+        justify-content: flex-end;
+      }
+      .link {
+        width: 100%;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: center;
+        a {
+          max-width: 90%;
+          position: relative;
+          img {
+            display: block;
+          }
+          &:hover img {
+            opacity: 1;
+            transform: scale(1) rotate(-5deg);
+            transition: transform 0.5s ease, opacity 1s ease;
+          }
+        }
+        .label {
+          font-size: 104px;
+          font-style: italic;
+          font-weight: 300;
+          max-width: 40vw;
+          overflow-wrap: break-word;
+          overflow: hidden;
+        }
+      }
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .follow-links,
+      .page-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        a:not(:last-child) {
+          margin-right: 40px;
+        }
+        .title {
+          padding-inline: 5px;
+          @media screen and (-webkit-device-pixel-ratio: 1.25) {
+            overflow-x: hidden;
+          }
+        }
+        span::before,
+        span::after {
+          font-style: italic;
+          font-weight: 400;
+        }
+      }
+      .follow-links span {
+        font-size: 18px;
+        line-height: 21px;
+        &::after,
+        &::before {
+          text-decoration: underline;
+        }
+      }
+      .page-links span {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+  }
+  &.visible {
+    z-index: 1000;
+    transition: z-index 1ms ease-out;
+    .up {
+      opacity: 1;
+      transition: opacity 1s 0.5s ease-out;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      padding: 80px 120px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu {
+      transform: scale(60);
+      transform-origin: center;
+      transition: transform 1s ease-in-out;
+    }
+  }
+}
+
+.locale-btn {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  border-style: solid;
+  overflow: hidden;
+  border-radius: 25px;
+  input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 3;
+  }
+  .knobs:before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 42px;
+    height: 42px;
+    content: attr(data-left);
+    font-family: $Font;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    z-index: 2;
+    border-radius: 22px;
+  }
+  .labels {
+    position: absolute;
+    inset: 3px;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      font-family: $Font;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 130%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-radius: 50%;
+      transition: border 0.2s ease-out;
+    }
+    &::after {
+      content: attr(data-right);
+      right: 0;
+    }
+    &::before {
+      content: attr(data-left);
+      left: 0;
+    }
+  }
+  input:active + .knobs:before {
+    width: 68px;
+  }
+  input:checked:active + .knobs:before {
+    margin-left: -26px;
+  }
+  input:checked + .knobs:before {
+    content: attr(data-right);
+    left: 54px;
+  }
+  // input:hover ~ div.labels {
+  //   &::before,
+  //   &::after {
+  //     border: 1px solid rgba(255, 255, 255, 0.4);
+  //   }
+  // }
+}
+@media screen and (min-width: 1201px) and (-webkit-device-pixel-ratio: 1.25) {
+  .main-menu {
+    width: 125vw;
+  }
+  .main-menu .up .main-links .link .label {
+    max-width: calc(40vw * 1.25);
+  }
+}
+@media (max-height: 900px) {
+  .main-menu .up .main-links .link .label {
+    font-size: 80px;
+    @media screen and (-webkit-device-pixel-ratio: 1.25) {
+      font-size: 104px;
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  header {
+    padding: 30px 32px 10px;
+    #logo {
+      transform: scale(0.65) translateX(-25px);
+    }
+  }
+  .main-menu {
+    .up {
+      opacity: 0;
+      width: 100vw;
+      overflow-x: hidden;
+      .main-links {
+        position: relative;
+        .link {
+          padding-bottom: 32px;
+          justify-content: flex-start;
+          a {
+            position: initial;
+            img {
+              display: block;
+            }
+            &:hover img {
+              opacity: 1;
+              transform: scale(1) rotate(-5deg);
+              transition: transform 0.5s ease, opacity 1s ease;
+            }
+          }
+          .label {
+            font-size: 40px;
+            font-weight: 400;
+            font-style: italic;
+          }
+        }
+      }
+      .page-links {
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (orientation: portrait) {
+          margin: 80px 0;
+        }
+        span {
+          padding-right: 32px;
+        }
+        span::before,
+        span::after {
+          font-size: 18px;
+          font-weight: 400;
+          font-style: italic;
+        }
+        .Body {
+          font-size: 18px;
+        }
+      }
+      .follow-links {
+        gap: 16px;
+        display: flex;
+        flex-direction: row;
+        span {
+          font-size: 14px;
+        }
+        span::before,
+        span::after {
+          font-style: italic;
+          font-weight: 400;
+          font-size: 14px;
+          text-decoration: underline;
+        }
+      }
+    }
+    &.visible .up {
+      padding: 70px 32px 40px;
+      @media screen and (orientation: portrait) {
+        justify-content: flex-end;
+      }
+    }
+    .main-menu-picture {
+      height: 794px;
+      width: auto;
+      left: 50%;
+    }
+  }
+  .locale-btn {
+    margin-right: 64px;
+    width: 62px;
+    height: 32px;
+    .knobs:before,
+    .labels::before,
+    .labels::after {
+      width: 24px;
+      height: 24px;
+      font-size: 10px;
+      line-height: 140%;
+      border-radius: 12px;
+    }
+    input:active + .knobs:before {
+      width: 38px;
+    }
+    input:checked:active + .knobs:before {
+      margin-left: -15px;
+    }
+    input:checked + .knobs:before {
+      left: 33px;
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  header {
+    padding: unset;
+    padding-top: 60px;
+    #logo {
+      transform: unset;
+    }
+  }
+  .main-menu {
+    width: 125vw;
+    .up {
+      opacity: 0;
+      width: unset;
+      overflow-x: unset;
+      .main-links {
+        position: unset;
+        .link {
+          a {
+            position: relative;
+          }
+          .label {
+            max-width: calc(40vw * 1.25);
+            font-size: 104px;
+            font-weight: 300;
+            @media screen and (max-height: 900px) {
+              font-size: 80px;
+            }
+          }
+        }
+        :nth-child(even) {
+          justify-content: flex-end;
+        }
+      }
+      .page-links {
+        gap: unset;
+        flex-direction: row;
+        align-items: center;
+        margin: unset;
+        span {
+          padding-right: unset;
+        }
+        span::before,
+        span::after {
+          font-size: 24px;
+        }
+        .Body {
+          font-size: 16px;
+        }
+      }
+      .follow-links {
+        gap: unset;
+        span {
+          font-size: 18px;
+        }
+        span::before,
+        span::after {
+          font-style: unset;
+          font-weight: unset;
+          font-size: 18px;
+          text-decoration: underline;
+        }
+      }
+    }
+    &.visible .up {
+      padding: 80px 120px;
+      justify-content: space-between;
+    }
+    .main-menu-picture {
+      width: 265px;
+      height: 400px;
+      left: calc(50% - 133px);
+    }
+  }
+  .locale-btn {
+    margin-right: unset;
+    width: 100px;
+    height: 50px;
+    .knobs:before {
+      width: 42px;
+      height: 42px;
+      font-size: 13px;
+      line-height: 130%;
+      border-radius: 22px;
+    }
+    .labels::before,
+    .labels::after {
+      width: 40px;
+      height: 40px;
+      font-size: 13px;
+      line-height: 130%;
+      border-radius: 50%;
+    }
+    input:active + .knobs:before {
+      width: 68px;
+    }
+    input:checked:active + .knobs:before {
+      margin-left: -26px;
+    }
+    input:checked + .knobs:before {
+      left: 54px;
+    }
+  }
+}
+@media not screen and (-webkit-device-pixel-ratio: 1.25) {
+  @media screen and (max-width: 1200px) and (min-width: 481px) {
+    .locale-btn {
+      input:hover ~ div.labels {
+        &::before,
+        &::after {
+          border: initial;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    padding: 30px 16px 10px;
+    #logo {
+      transform: scale(0.65) translateX(-25px);
+    }
+  }
+  .main-menu {
+    .up {
+      overflow-x: hidden;
+      .main-links {
+        .link {
+          padding-bottom: 16px;
+          justify-content: flex-start;
+          .label {
+            font-size: 40px;
+            font-weight: 400;
+          }
+          @media screen and (max-height: 740px) {
+            .label {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+      .follow-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        span {
+          font-size: 14px;
+        }
+        span::before,
+        span::after {
+          font-style: italic;
+          font-weight: 400;
+          font-size: 14px;
+          text-decoration: underline;
+        }
+      }
+      .page-links {
+        gap: 16px;
+        display: flex;
+        // font-size: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        span {
+          padding-right: 32px;
+        }
+        span::before,
+        span::after {
+          font-size: 18px;
+          font-weight: 400;
+          font-style: italic;
+        }
+      }
+    }
+    &.visible .up {
+      padding: 0 32px 40px;
+      width: 100vw;
+      justify-content: flex-end;
+      gap: 32px;
+    }
+  }
+  .locale-btn {
+    margin-right: 56px;
+    width: 62px;
+    height: 32px;
+    .knobs:before,
+    .labels::before,
+    .labels::after {
+      width: 24px;
+      height: 24px;
+      font-size: 10px;
+      line-height: 140%;
+      border-radius: 12px;
+    }
+    input:active + .knobs:before {
+      width: 38px;
+    }
+    input:checked:active + .knobs:before {
+      margin-left: -15px;
+    }
+    input:checked + .knobs:before {
+      left: 33px;
+    }
+    input:hover ~ div.labels {
+      &::before,
+      &::after {
+        border: initial;
+      }
+    }
+  }
+}

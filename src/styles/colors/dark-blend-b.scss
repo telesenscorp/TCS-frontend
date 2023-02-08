@@ -1,0 +1,54 @@
+$Blend: var(--dark-blend-b);
+$White: var(--white);
+.color-dark-blend-b {
+  color: $Blend;
+}
+.color-after-dark-blend-b::after,
+.color-before-dark-blend-b::before {
+  color: $Blend;
+}
+.color-after-dark-blend-b::after,
+.color-before-dark-blend-b::before,
+.bg-dark-blend-b,
+.hover-bg-dark-blend-b:hover {
+  background-color: $Blend;
+}
+.fill-dark-blend-b {
+  fill: $Blend;
+  & * {
+    fill: $Blend;
+  }
+}
+.bg-gu-dark-blend-b {
+  background: linear-gradient(180deg, $Blend 0%, $White 100%);
+}
+.bg-gd-dark-blend-b {
+  background: linear-gradient(0deg, $Blend 0%, $White 100%);
+}
+.scroll-dark-blend-b {
+  border-color: $Blend !important;
+  &::before {
+    background-color: $Blend !important;
+  }
+}
+.fade-down-dark-blend-b {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(0deg, $Blend 0%, transparent 100%);
+  }
+}
+.border-color-dark-blend-b {
+  border-color: $Blend;
+}
+.hover-border-color-dark-blend-b:hover ~ div.labels {
+  &::before,
+  &::after {
+    border: 1px solid $Blend;
+  }
+}

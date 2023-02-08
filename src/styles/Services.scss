@@ -1,0 +1,651 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$MidnightBlue: var(--midnight-blue);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+$Orange: var(--orange);
+$Font: var(--font);
+.shelf-content {
+  .H3 {
+    padding-top: 60px;
+  }
+}
+.services-slider {
+  display: flex;
+  transform: translateX(0);
+  .product-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 100px 0 100px 85px;
+    &:nth-child(2) .product-image {
+      transform: rotate(-5deg);
+    }
+    .product-desc {
+      .product-image {
+        transform-origin: bottom left;
+        width: 480px;
+        height: 612px;
+        background-color: #c4c4c4;
+        margin-bottom: 30px;
+        overflow: hidden;
+        img {
+          pointer-events: none;
+          user-select: none;
+        }
+      }
+    }
+    .product-title {
+      position: absolute;
+      left: 420px;
+      z-index: 10;
+    }
+    .pager {
+      width: 700px;
+      height: 100%;
+      z-index: 999;
+    }
+  }
+
+  .services-card {
+    width: 420px;
+    padding: 60px 30px;
+    position: relative;
+    p {
+      transition: color 0.5s ease-out;
+    }
+    &.navy-green {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $NavyGreen 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $NavyGreen 0%, transparent 100%);
+      }
+    }
+    &.bright-green {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $BrightGreen 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $BrightGreen 0%, transparent 100%);
+      }
+    }
+    &.light-green {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $LightGreen 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $LightGreen 0%, transparent 100%);
+      }
+    }
+    &.navy-blue {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $NavyBlue 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $NavyBlue 0%, transparent 100%);
+      }
+    }
+    &.bright-blue {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $BrightBlue 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $BrightBlue 0%, transparent 100%);
+      }
+    }
+    &.light-blue {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $LightBlue 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $LightBlue 0%, transparent 100%);
+      }
+    }
+    &.grey-blue {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $GreyBlue 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $GreyBlue 0%, transparent 100%);
+      }
+    }
+    &.midnight-blue {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $MidnightBlue 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $MidnightBlue 0%, transparent 100%);
+      }
+    }
+    &.light-grey {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $LightGrey 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $LightGrey 0%, transparent 100%);
+      }
+    }
+    &.grey {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $JustGrey 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $JustGrey 0%, transparent 100%);
+      }
+    }
+    &.yellow {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $Yellow 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $Yellow 0%, transparent 100%);
+      }
+    }
+    &.black {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $Black 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $Black 0%, transparent 100%);
+      }
+    }
+    &.orange {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $Orange 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $Orange 0%, transparent 100%);
+      }
+    }
+    &.white {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $White 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $White 0%, transparent 100%);
+      }
+    }
+    &.soft-blue,
+    &.ending {
+      &:hover::after,
+      &::after {
+        background: radial-gradient(50.12% 100% at 49.88% 100%, $SoftBlue 0%, transparent 100%);
+      }
+      &.selected::after {
+        background: linear-gradient(0deg, $SoftBlue 0%, transparent 100%);
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      height: 0;
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+    &:hover::after {
+      right: 0;
+      left: 0;
+      height: 210px;
+      border-radius: 1000px 1000px 0 0;
+      transition: all 1s ease;
+    }
+    &.selected:hover::after,
+    &.selected::after {
+      right: 0;
+      left: 0;
+      border-radius: 0;
+      height: 50%;
+      transition: all 1s ease;
+    }
+    .image {
+      height: 532px;
+      width: 355px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+    .desc {
+      width: 100%;
+    }
+    &.square {
+      .image {
+        height: 355px;
+      }
+    }
+  }
+}
+
+.services-mob {
+  display: flex;
+  flex-direction: column;
+  .shelf-content-mob {
+    padding: 32px;
+  }
+  .services-tree-mob {
+    width: 100vw;
+    overflow-x: scroll;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    .services-card {
+      scroll-snap-align: start;
+      width: 342px;
+      padding: 20px 16px 32px;
+      position: relative;
+      & > div {
+        z-index: 2;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        transition: all 0.5s ease;
+      }
+      &.navy-green::after {
+        background: linear-gradient(0deg, $NavyGreen 0%, transparent 100%);
+      }
+      &.bright-green::after {
+        background: linear-gradient(0deg, $BrightGreen 0%, transparent 100%);
+      }
+      &.light-green::after {
+        background: linear-gradient(0deg, $LightGreen 0%, transparent 100%);
+      }
+      &.navy-blue::after {
+        background: linear-gradient(0deg, $NavyBlue 0%, transparent 100%);
+      }
+      &.bright-blue::after {
+        background: linear-gradient(0deg, $BrightBlue 0%, transparent 100%);
+      }
+      &.light-blue::after {
+        background: linear-gradient(0deg, $LightBlue 0%, transparent 100%);
+      }
+      &.grey-blue::after {
+        background: linear-gradient(0deg, $GreyBlue 0%, transparent 100%);
+      }
+      &.midnight-blue::after {
+        background: linear-gradient(0deg, $MidnightBlue 0%, transparent 100%);
+      }
+      &.light-grey::after {
+        background: linear-gradient(0deg, $LightGrey 0%, transparent 100%);
+      }
+      &.grey::after {
+        background: linear-gradient(0deg, $JustGrey 0%, transparent 100%);
+      }
+      &.black::after {
+        background: linear-gradient(0deg, $Black 0%, transparent 100%);
+      }
+      &.orange::after {
+        background: linear-gradient(0deg, $Orange 0%, transparent 100%);
+      }
+      &.yellow::after {
+        background: linear-gradient(0deg, $Yellow 0%, transparent 100%);
+      }
+      &.white::after {
+        background: linear-gradient(0deg, $White 0%, transparent 100%);
+      }
+      &.soft-blue::after, &.ending::after {
+        background: linear-gradient(0deg, $SoftBlue 0%, transparent 100%);
+      }
+      &.selected::after {
+        height: 50%;
+      }
+      .image {
+        width: 310px;
+        height: 526px;
+        position: relative;
+        overflow: visible;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .mob-card-arrow {
+          right: 16px;
+          width: 66px;
+          height: 66px;
+          bottom: -32px;
+          position: absolute;
+          border-radius: 50%;
+          background-color: $White;
+          transform: rotate(-30deg);
+          .arrow-svg .point {
+            fill: $NavyGreen;
+          }
+        }
+      }
+      .desc {
+        position: relative;
+        padding-top: 20px;
+        width: 70%;
+        p {
+          transition: color 0.5s ease-out;
+        }
+        .bold {
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 600 !important;
+        }
+        .medium {
+          font-weight: 400 !important;
+          font-size: 14px;
+          line-height: 140%;
+        }
+      }
+      &.square {
+        .image {
+          height: 310px;
+        }
+      }
+    }
+  }
+}
+.services-tree .flex-col .services-card.selected,
+.services-tree .services-mob .services-card.selected {
+  &.white,
+  &.navy-green,
+  &.bright-green,
+  &.light-green,
+  &.light-blue,
+  &.soft-blue,
+  &.light-grey,
+  &.yellow {
+    p {
+      color: $Black;
+    }
+  }
+
+  &.black,
+  &.navy-blue,
+  &.bright-blue,
+  &.grey-blue,
+  &.midnight-blue,
+  &.orange,
+  &.grey {
+    p {
+      color: $White;
+    }
+  }
+}
+.services-tree .flex-col:first-child .services-card.selected,
+.services-tree .services-mob:first-child .services-card.selected {
+  &::after {
+    height: 100%;
+  }
+  &.navy-green::after {
+    background: $NavyGreen;
+  }
+  &.bright-green::after {
+    background: $BrightGreen;
+  }
+  &.light-green::after {
+    background: $LightGreen;
+  }
+  &.navy-blue::after {
+    background: $NavyBlue;
+  }
+  &.bright-blue::after {
+    background: $BrightBlue;
+  }
+  &.light-blue::after {
+    background: $LightBlue;
+  }
+  &.soft-blue::after {
+    background: $SoftBlue;
+  }
+  &.grey-blue::after {
+    background: $GreyBlue;
+  }
+  &.midnight-blue::after {
+    background: $MidnightBlue;
+  }
+  &.light-grey::after {
+    background: $LightGrey;
+  }
+  &.grey::after {
+    background: $JustGrey;
+  }
+  &.yellow::after {
+    background: $Yellow;
+  }
+  &.white::after {
+    background: $White;
+  }
+  &.black::after {
+    background: $Black;
+  }
+  &.orange::after {
+    background: $Orange;
+  }
+}
+.services-tree .flex-col:first-child #cards-tree {
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+  .services-slider .product-card {
+    margin: 100px 0 100px 85px;
+    .pager {
+      width: 515px;
+    }
+    .product-title {
+      @media (-webkit-device-pixel-ratio: 1) {
+        .H2 {
+          font-size: 70px;
+          line-height: 63px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1201px) and (-webkit-device-pixel-ratio: 1.25) {
+  .services-slider .product-card {
+    .pager {
+      width: calc(515px * 1.25);
+    }
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .services-slider .product-card {
+    margin: 192px 0 60px 16px;
+    .product-desc .product-image {
+      width: 310px;
+      height: 530px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .services-title {
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    margin-left: 32px;
+  }
+  .services-mob-slider {
+    display: flex;
+    overflow-x: scroll;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    & > div {
+      scroll-snap-align: start;
+      &:nth-last-child(1) {
+        padding-right: 32px;
+      }
+    }
+    .services-mob-card {
+      margin: 40px 0 92px 32px;
+      position: relative;
+      background-color: $JustGrey;
+      .mob-card-arrow {
+        right: 16px;
+        width: 66px;
+        height: 66px;
+        bottom: -32px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $White;
+        transform: rotate(-30deg);
+        .arrow-svg .point {
+          fill: $NavyGreen;
+        }
+      }
+      &::before {
+        content: attr(data-title);
+        font-family: $Font;
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        color: $White;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        text-align: right;
+        writing-mode: vertical-rl;
+      }
+      img {
+        width: 310px;
+        height: 530px;
+        object-fit: cover;
+      }
+    }
+  }
+  .services-mob {
+    .shelf-content-mob {
+      padding: 60px 264px 40px 32px;
+    }
+    .services-tree-mob {
+      .ending-spacer {
+        width: calc(100vw - 342px);
+        scroll-snap-align: start;
+        padding: 20px 16px 32px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .services-slider .product-card {
+    margin: 100px 0 100px 85px;
+    .product-desc .product-image {
+      width: 480px;
+      height: 612px;
+      img {
+        width: initial;
+        height: initial;
+        object-fit: unset;
+      }
+    }
+    .product-title {
+      .H2 {
+        font-size: 70px;
+        line-height: 63px;
+        font-weight: 700;
+      }
+    }
+    .pager {
+      width: 515px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .services-slider .product-card {
+    margin: 192px 0 60px 16px;
+    .product-desc .product-image {
+      width: 310px;
+      height: 530px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .services-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 32px;
+    margin-top: 130px;
+    p {
+      font-weight: 600;
+    }
+  }
+  .services-mob-slider {
+    display: flex;
+    overflow-x: scroll;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    .services-mob-card {
+      scroll-snap-align: center;
+      margin: 40px 16px 92px;
+      position: relative;
+      .mob-card-arrow {
+        right: 16px;
+        width: 66px;
+        height: 66px;
+        bottom: -32px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $White;
+        transform: rotate(-30deg);
+        .arrow-svg .point {
+          fill: $NavyGreen;
+        }
+      }
+      &::before {
+        content: attr(data-title);
+        font-family: $Font;
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        color: $White;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        text-align: right;
+        writing-mode: vertical-rl;
+      }
+      img {
+        width: 310px;
+        height: 530px;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,254 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+.contact-us {
+  padding: 60px 0;
+}
+.subscribe-form {
+  padding-bottom: 60px;
+}
+.vacancy-application {
+  padding: 0 0 60px;
+  display: none;
+  &.apply {
+    display: block;
+  }
+}
+.contact-form-root {
+  gap: 20px;
+  display: grid;
+  margin: 0 auto;
+  max-width: 820px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "fn ln"
+    "pn ea"
+    "mc mc"
+    "cv cv"
+    "cb cb"
+    "sn sn";
+
+  &.subscribe {
+    grid-template-areas:
+      "fn ln"
+      "pn pn"
+      "ea ea";
+  }
+  & > div:nth-child(1) {
+    grid-area: fn;
+  }
+  & > div:nth-child(2) {
+    grid-area: ln;
+  }
+  & > div:nth-child(3) {
+    grid-area: pn;
+  }
+  & > div:nth-child(4) {
+    grid-area: ea;
+  }
+  & > div:nth-child(5) {
+    grid-area: mc;
+  }
+  & > div:nth-child(6) {
+    grid-area: cv;
+  }
+  & > div:nth-child(7) {
+    grid-area: cb;
+  }
+  & > div:nth-child(8) {
+    grid-area: sn;
+  }
+  .submission {
+    .svg-btn {
+      aspect-ratio: 1 / 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .clutch {
+      margin-left: -10px;
+      .clutch-btn {
+        background-image: url("../assets/clutchButton.svg");
+        width: 100px;
+      }
+    }
+    .send-btn {
+      background-image: url("../assets/send-button.svg");
+      width: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .contact-us {
+    padding: 60px 64px 60px 32px;
+  }
+  .subscribe-form {
+    padding: 0 64px 60px 32px;
+  }
+  .contact-form-root {
+    grid-template-columns: 1fr;
+    grid-template-areas: unset;
+    &.subscribe {
+      grid-template-areas: unset;
+      max-width: initial;
+    }
+    & > div {
+      place-self: end;
+      width: 70%;
+      grid-area: unset !important;
+    }
+    .submission {
+      .clutch {
+        margin-left: -5px;
+        .clutch-btn {
+          width: 60px;
+        }
+      }
+      .send-btn {
+        width: 100px;
+      }
+    }
+    .Sub2 {
+      font-size: 15px;
+    }
+    .checkbox-root {
+      margin-bottom: 10px;
+      .Link {
+        font-size: 14px;
+      }
+    }
+  }
+  .vacancy-application {
+    .contact-form-root > div {
+      place-self: unset;
+      width: unset;
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .contact-us {
+    padding: 60px 0;
+  }
+  .subscribe-form {
+    padding-bottom: 60px;
+  }
+  .contact-form-root {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "fn ln"
+      "pn ea"
+      "mc mc"
+      "cv cv"
+      "cb cb"
+      "sn sn";
+    &.subscribe {
+      grid-template-areas:
+        "fn ln"
+        "pn pn"
+        "ea ea";
+      max-width: 820px;
+    }
+    & > div {
+      place-self: unset;
+      width: unset;
+    }
+    & > div:nth-child(1) {
+      grid-area: fn;
+    }
+    & > div:nth-child(2) {
+      grid-area: ln;
+    }
+    & > div:nth-child(3) {
+      grid-area: pn;
+    }
+    & > div:nth-child(4) {
+      grid-area: ea !important;
+    }
+    & > div:nth-child(5) {
+      grid-area: mc !important;
+    }
+    & > div:nth-child(6) {
+      grid-area: cv !important;
+    }
+    & > div:nth-child(7) {
+      grid-area: cb !important;
+    }
+    & > div:nth-child(8) {
+      grid-area: sn !important;
+    }
+    .submission {
+      .clutch {
+        margin-left: -10px;
+        .clutch-btn {
+          width: 100px;
+        }
+      }
+      .send-btn {
+        width: 180px;
+      }
+    }
+    .Sub2 {
+      font-size: 18px;
+    }
+    .checkbox-root {
+      margin-bottom: 20px;
+      .Link {
+        font-size: 16px;
+      }
+    }
+  }
+  .vacancy-application {
+    .contact-form-root > div {
+      place-self: unset;
+      width: unset;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .vacancy-application {
+    padding: 60px 0 20px;
+  }
+  .contact-us {
+    padding: 0 32px 60px;
+  }
+  .subscribe-form {
+    padding: 0 32px 60px;
+  }
+  .contact-form-root {
+    grid-template-columns: 1fr;
+    grid-template-areas: unset;
+    &.subscribe {
+      grid-template-areas: unset;
+    }
+    & > div {
+      grid-area: unset !important;
+    }
+    .submission {
+      .clutch {
+        margin-left: -5px;
+        .clutch-btn {
+          width: 60px;
+        }
+      }
+      .send-btn {
+        width: 100px;
+      }
+    }
+  }
+  .vacancies-separator {
+    display: none;
+  }
+}

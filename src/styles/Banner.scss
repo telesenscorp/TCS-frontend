@@ -1,0 +1,260 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+
+.banner {
+  width: 100%;
+  padding: 140px 0 85px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  box-sizing: content-box;
+  .banner-container {
+    display: flex;
+    flex-direction: row;
+    box-sizing: content-box;
+    animation-name: ticker;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
+
+    .H1 {
+      white-space: nowrap;
+    }
+  }
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  .side-by-side {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .input {
+    height: 50px;
+  }
+  .multi {
+    min-height: 94px;
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .checkbox input,
+  .checkbox svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .input:focus {
+    border: 2px solid $JustGrey;
+  }
+  .input:focus {
+    border: 2px solid $JustGrey;
+  }
+  .submission {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    .clutch {
+      margin-left: -10px;
+    }
+    .send-btn {
+      background-image: url("../assets/send-button.svg");
+      width: 200px;
+      aspect-ratio: 1 / 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.hide-vertical {
+  height: 0;
+  transition: height 1s ease;
+}
+.separator {
+  padding: 8px;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  span {
+    font-size: 22px;
+    font-weight: 700;
+    color: $White;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .banner {
+    width: 100%;
+    padding: 60px 0;
+    .banner-container {
+      .ticker {
+        padding-left: 32px;
+      }
+      .H1 {
+        white-space: normal;
+        font-size: 72px;
+        line-height: 90%;
+        line-break: loose;
+        width: 500px;
+      }
+      .separator {
+        padding: 12px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: 40px;
+          line-height: 36px;
+          font-weight: 700;
+          color: $White;
+        }
+      }
+    }
+  }
+
+  .contact-us {
+    height: auto;
+    padding-top: 0;
+    .contact-form {
+      padding: 32px;
+      .side-by-side {
+        flex-direction: column;
+        gap: 20px;
+        div + div {
+          margin-left: 0;
+        }
+      }
+      .input:focus {
+        border: 2px solid $NavyGreen;
+        color: $NavyGreen;
+      }
+      .submission {
+        margin: 20px 0 60px;
+        .send-button {
+          transform: scale(0.555) translate(-70px, -70px);
+        }
+        .clutch-button {
+          transform: scale(0.6) translate(-30px, -30px);
+        }
+        .send-btn {
+          width: 100px;
+        }
+        .clutch {
+          width: 60px;
+          height: 60px;
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .banner {
+    width: 100%;
+    padding: 140px 0 85px;
+    .banner-container {
+      .ticker {
+        padding-left: unset;
+      }
+      .H1 {
+        white-space: nowrap;
+        font-size: 120px;
+        font-weight: 300;
+        line-break: unset;
+        width: unset;
+      }
+      .separator {
+        padding: 8px;
+        margin: 0 30px;
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: 22px;
+          font-weight: 700;
+          color: $White;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .contact-us {
+    height: initial;
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .banner {
+    padding: 80px 0 60px;
+    .banner-container {
+      animation-name: tickerMobile;
+      .ticker {
+        flex-direction: column;
+        width: 100vw;
+        padding: 0 16px;
+        justify-content: space-between;
+        .H1 {
+          font-size: 72px;
+          width: calc(100vw - 32px);
+          line-height: 90%;
+          white-space: initial;
+          font-style: italic;
+        }
+      }
+      .reverse {
+        gap: 40px;
+        flex-direction: column-reverse;
+      }
+      .separator {
+        margin: unset;
+        span {
+          font-size: 38px;
+          line-height: 90%;
+        }
+      }
+    }
+  }
+  .contact-form {
+    padding: 0 32px 60px;
+    .Sub2 {
+      font-size: 15px;
+    }
+    .checkbox-root .Body {
+      font-size: 14px;
+    }
+    .submission {
+      margin: 16px 0 0;
+    }
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes tickerMobile {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200vw);
+  }
+}

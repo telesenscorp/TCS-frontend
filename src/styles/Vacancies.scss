@@ -1,0 +1,578 @@
+$NavyGreen: var(--navy-green);
+$BrightGreen: var(--bright-green);
+$LightGreen: var(--light-green);
+$NavyBlue: var(--navy-blue);
+$BrightBlue: var(--bright-blue);
+$LightBlue: var(--light-blue);
+$SoftBlue: var(--soft-blue);
+$GreyBlue: var(--grey-blue);
+$JustGrey: var(--just-grey);
+$LightGrey: var(--light-grey);
+$Yellow: var(--yellow);
+$White: var(--white);
+$Black: var(--black);
+.vacancies-root {
+  padding: 60px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .vacancies-bar {
+    width: 295px;
+    margin-right: 20px;
+    .bar-filter {
+      margin-bottom: 20px;
+    }
+  }
+  .vacancies-list {
+    flex: 1;
+    max-width: 820px;
+    .single-vacancy {
+      border-bottom: $NavyGreen 1px solid;
+      .accordion {
+        display: flex;
+        padding: 24px 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .toggle {
+          width: 32px;
+          height: 32px;
+          position: relative;
+          &::after,
+          &::before {
+            content: "";
+            top: 15px;
+            left: 3px;
+            width: 26px;
+            height: 2px;
+            position: absolute;
+            background-color: $NavyGreen;
+          }
+          &::before {
+            transform: rotate(90deg);
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+      .single-desc {
+        height: 0;
+        padding-right: 100px;
+        transition: height 0.7s ease-in-out;
+        overflow-y: hidden;
+        .apply-btn {
+          width: max-content;
+          padding: 20px 46px;
+          border: 1px solid $NavyGreen;
+          transition: background-color 0.5s ease-out;
+          &:hover {
+            border: 1px solid $LightGrey;
+            background-color: $LightGrey;
+          }
+          &.apply {
+            background-color: $NavyGreen;
+            p {
+              color: $White;
+            }
+          }
+        }
+        .vacancies-separator {
+          width: 100%;
+          height: 60px;
+        }
+      }
+      &.collapse {
+        .accordion .toggle::before {
+          transform: rotate(0deg);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) and (min-width: 1201px) {
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  .vacancies-root {
+    padding: 20px 0 0;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    .container {
+      width: 70%;
+      padding-right: 64px;
+      flex-direction: column;
+      flex: unset;
+      .vacancies-bar {
+        margin-right: unset;
+        width: 100%;
+        .bar-filter {
+          margin-bottom: 40px;
+          border-bottom: $NavyGreen 1px solid;
+          .accordion {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            .toggle {
+              width: 24px;
+              height: 24px;
+              position: relative;
+              &::after,
+              &::before {
+                content: "";
+                top: 13px;
+                left: 2px;
+                width: 20px;
+                height: 2px;
+                position: absolute;
+                background-color: $NavyGreen;
+              }
+              &::before {
+                transform: rotate(90deg);
+                transition: transform 0.3s ease;
+              }
+            }
+          }
+          .filter-item {
+            padding: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            &.selected {
+              background-color: $SoftBlue;
+            }
+            .tick-empty {
+              margin: 2px;
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              border: 1px solid $LightGrey;
+            }
+          }
+          .overflow-hidden {
+            transition: height 0.3s ease-in-out;
+            border-top: 1px solid rgba(0, 77, 53, 0.4);
+          }
+          &.collapse {
+            .accordion .toggle::before {
+              transform: rotate(0deg);
+              transition: transform 0.3s ease;
+            }
+          }
+          .Body {
+            color: $NavyGreen;
+          }
+        }
+      }
+      .vacancies-list {
+        flex: 1 1;
+        border-top: 1px solid rgba(0, 77, 53, 0.4);
+        padding-top: 40px;
+        .single-vacancy {
+          .accordion {
+            display: flex;
+            padding: 32px 16px 16px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .toggle {
+              width: 32px;
+              height: 32px;
+              position: relative;
+              &::after,
+              &::before {
+                content: "";
+                top: 15px;
+                left: 3px;
+                width: 26px;
+                height: 2px;
+                position: absolute;
+                background-color: $NavyGreen;
+              }
+              &::before {
+                transform: rotate(90deg);
+                transition: transform 0.3s ease;
+              }
+            }
+            .H5 {
+              font-size: 24px;
+              line-height: 24px;
+              font-weight: 400;
+            }
+            p {
+              padding-right: 16px;
+            }
+          }
+          .single-desc {
+            padding: 0 16px;
+            margin: 0;
+            transition: margin 0.5s ease-out, height 0.7s ease-in-out;
+            .Sub {
+              font-size: 16px;
+              line-height: 140%;
+            }
+            .Body {
+              font-size: 14px;
+              line-height: 19.6px;
+              &.checkbox-error {
+                font-size: 12px;
+                line-height: 140%;
+              }
+            }
+            .download-button {
+              font-size: 16px;
+              line-height: 140%;
+            }
+            .apply-btn {
+              margin-bottom: unset;
+              display: flex;
+              justify-content: center;
+              padding: 16px 130px;
+              &:hover {
+                border: 1px solid $NavyGreen;
+                background-color: initial;
+              }
+              .Sub2 {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 140%;
+              }
+            }
+            .tablet-separator-16 {
+              width: 100%;
+              height: 16px;
+            }
+            .vacancies-separator {
+              width: 100%;
+              height: 40px;
+            }
+            .vacancy-application {
+              .contact-form-root {
+                .text-input :last-child {
+                  .Body {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+          &.collapse {
+            border-bottom: unset;
+            .single-desc {
+              transition: height 0.7s ease-in-out;
+              margin-top: 16px;
+              .apply-btn {
+                &.apply {
+                  background-color: $NavyGreen;
+                  p {
+                    color: $White;
+                  }
+                }
+              }
+            }
+            .accordion .toggle::before {
+              transform: rotate(0deg);
+              transition: transform 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1229px) and (min-width: 960px) and (-webkit-device-pixel-ratio: 1.25) {
+  .vacancies-root {
+    padding: 60px 0;
+    width: 100%;
+    justify-content: center;
+    .container {
+      width: unset;
+      padding-right: unset;
+      flex-direction: initial;
+      flex: 1 1;
+      .vacancies-bar {
+        margin-right: 20px;
+        width: 295px;
+        .bar-filter {
+          margin-bottom: 20px;
+          border-bottom: unset;
+          .accordion {
+            padding: 24px 0;
+            .toggle {
+              width: 32px;
+              height: 32px;
+              &::after,
+              &::before {
+                content: "";
+                top: 15px;
+                left: 3px;
+                width: 26px;
+              }
+            }
+          }
+          .Body {
+            color: unset;
+          }
+        }
+      }
+      .vacancies-list {
+        flex: 1 1;
+        border-top: unset;
+        padding-top: unset;
+        .single-vacancy {
+          .accordion {
+            padding: 24px 0;
+            .H5 {
+              font-size: 32px;
+              line-height: 38px;
+              font-weight: 300;
+            }
+            p {
+              padding-right: unset;
+            }
+          }
+          .single-desc {
+            padding: 0 100px 0 0;
+            margin: unset;
+            transition: height 0.7s ease-in-out;
+            .Sub {
+              font-size: 24px;
+              line-height: 28px;
+            }
+            .Body {
+              font-size: 16px;
+              line-height: 22px;
+              &.checkbox-error {
+                line-height: 17px;
+              }
+            }
+            .download-button {
+              line-height: 22px;
+            }
+            .apply-btn {
+              margin-bottom: unset;
+              display: block;
+              justify-content: unset;
+              padding: 20px 46px;
+              &:hover {
+                border: 1px solid $LightGrey;
+                background-color: $LightGrey;
+              }
+              .Sub2 {
+                font-size: 18px;
+                line-height: 21px;
+              }
+            }
+            .tablet-separator-16 {
+              width: unset;
+              height: unset;
+            }
+            .vacancies-separator {
+              height: 60px;
+            }
+            .vacancy-application {
+              .contact-form-root {
+                .text-input :last-child {
+                  .Body {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+          &.collapse {
+            border-bottom: $NavyGreen 1px solid;
+            .single-desc {
+              transition: unset;
+              margin-top: unset;
+              .apply-btn {
+                &.apply {
+                  background-color: $NavyGreen;
+                  p {
+                    color: $White;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .vacancies-root {
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    .container {
+      width: 100%;
+      flex-direction: column;
+      .vacancies-bar {
+        padding-inline: 16px;
+        width: 100%;
+        margin-right: 0;
+        .bar-filter {
+          margin-bottom: 32px;
+          border-bottom: $NavyGreen 1px solid;
+          .accordion {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            .toggle {
+              width: 20px;
+              height: 20px;
+              position: relative;
+              &::after,
+              &::before {
+                content: "";
+                top: 13px;
+                left: 0;
+                width: 20px;
+                height: 2px;
+                position: absolute;
+                background-color: $NavyGreen;
+              }
+              &::before {
+                transform: rotate(90deg);
+                transition: transform 0.3s ease;
+              }
+            }
+          }
+          .filter-item {
+            padding: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            &.selected {
+              background-color: $SoftBlue;
+            }
+            .tick-empty {
+              margin: 2px;
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              border: 1px solid $LightGrey;
+            }
+          }
+          .overflow-hidden {
+            border-top: 1px solid rgba(0, 77, 53, 0.2);
+            transition: height 0.3s ease-in-out;
+          }
+          &.collapse {
+            .accordion .toggle::before {
+              transform: rotate(0deg);
+              transition: transform 0.3s ease;
+            }
+          }
+        }
+      }
+      .vacancies-list {
+        flex: 1;
+        padding-inline: 16px;
+        border-top: 1px solid rgba(0, 77, 53, 0.4);
+        .single-vacancy {
+          .accordion {
+            display: flex;
+            padding: 36px 16px 16px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .toggle {
+              width: 20px;
+              height: 20px;
+              position: relative;
+              &::after,
+              &::before {
+                content: "";
+                top: 10px;
+                left: 0;
+                width: 20px;
+                height: 2px;
+                position: absolute;
+                background-color: $NavyGreen;
+              }
+              &::before {
+                transform: rotate(90deg);
+                transition: transform 0.3s ease;
+              }
+            }
+            .H5 {
+              font-size: 24px;
+              line-height: 28px;
+            }
+            p {
+              padding-right: 16px;
+            }
+          }
+          .single-desc {
+            padding: 0;
+            margin: 0;
+            transition: margin 0.5s ease-out, height 0.7s ease-in-out;
+            .Body {
+              font-size: 14px;
+              line-height: 19.6px;
+              &.checkbox-error {
+                font-size: 12px;
+                line-height: 140%;
+              }
+            }
+            .Sub {
+              font-size: 16px;
+              line-height: 140%;
+            }
+            .Sub2 {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 140%;
+            }
+            .apply-btn {
+              margin-bottom: unset;
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              padding: 16px;
+            }
+            .tablet-separator {
+              width: 100%;
+              height: 16px;
+            }
+            .download-button {
+              font-size: 16px;
+              line-height: 140%;
+            }
+          }
+          &.collapse {
+            border-bottom: unset;
+            .single-desc {
+              transition: height 0.7s ease-in-out;
+              .apply-btn {
+                &:hover {
+                  border: 1px solid $NavyGreen;
+                  background-color: initial;
+                }
+                &.apply {
+                  background-color: $NavyGreen;
+                  p {
+                    color: $White;
+                  }
+                }
+              }
+            }
+            .accordion .toggle::before {
+              transform: rotate(0deg);
+              transition: transform 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
